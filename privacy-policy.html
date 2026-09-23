@@ -94,8 +94,10 @@
       <b>The short version.</b> Your diary entries stay on your device. They are
       uploaded to your own Google Drive only when you press the backup button
       yourself. They are never sent to advertisers, never used for analytics,
-      and never leave your control. The app does show ads and does report
-      crashes, and those parts are described in full below.
+      and never leave your control. The app offers optional paid subscriptions
+      (Premium) through Google Play; payments are handled by Google Play Billing
+      and managed by Apphud, a subscription analytics service. Free users see
+      ads. These parts are described in full below.
     </div>
 
     <h2>1. Who is responsible</h2>
@@ -137,22 +139,46 @@
         <td>Illustrating your own entries</td>
       </tr>
       <tr>
-        <td><b>Advertising ID (AD_ID)</b></td>
-        <td>Yes</td>
-        <td><b>Yes — Google AdMob</b></td>
-        <td>Showing ads</td>
+        <td>
+          <b>Purchase history</b> — subscription status, transaction records
+        </td>
+        <td>Yes, if you subscribe</td>
+        <td><b>Yes — Apphud, Google Play Billing</b></td>
+        <td>
+          Processing subscriptions and managing access to Premium features
+        </td>
       </tr>
       <tr>
-        <td><b>App activity</b> — screens opened, interactions</td>
-        <td>Yes</td>
-        <td><b>Yes — Firebase Analytics</b></td>
-        <td>Understanding which parts of the app are used</td>
+        <td><b>Advertising ID (AD_ID)</b></td>
+        <td>Yes, subject to consent</td>
+        <td><b>Yes — Google AdMob</b></td>
+        <td>Showing ads to free users</td>
+      </tr>
+      <tr>
+        <td>
+          <b>App activity</b> — screens opened, interactions, in-app events
+        </td>
+        <td>Yes, subject to consent</td>
+        <td><b>Yes — Firebase Analytics (GA4)</b></td>
+        <td>
+          Understanding which parts of the app are used; app campaigns
+          measurement
+        </td>
       </tr>
       <tr>
         <td><b>Crash data and diagnostics</b></td>
         <td>Yes</td>
         <td><b>Yes — Firebase Crashlytics</b></td>
         <td>Finding and fixing crashes</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Device information</b> — platform, device model, OS version, app
+          version, locale, time zone, country, IP address
+        </td>
+        <td>Yes</td>
+        <td><b>Yes — Apphud</b></td>
+        <td>Subscription management and analytics</td>
       </tr>
       <tr>
         <td><b>Name and email address</b></td>
@@ -171,19 +197,38 @@
     </p>
 
     <h2>4. Third-party services (data processors)</h2>
-    <p>The app uses the following third-party services operated by Google:</p>
+    <p>The app uses the following third-party services:</p>
     <ul>
       <li>
-        <b>Google AdMob</b> — serves advertisements. Receives the advertising
-        identifier (AD_ID). Subject to your consent where required.
+        <b>Apphud</b> — manages subscriptions and provides subscription
+        analytics. Receives: locale, language, time zone, country, IP address,
+        platform, device family and model, OS version, current and first app
+        version, push token, Apphud user ID (a UUID that resets with each new
+        install on Android), purchase data (from the SDK and from Google server
+        notifications), and install date. The Advertising ID is sent only after
+        you give consent for ads measurement. Apphud acts as a data processor;
+        data is stored in the EU and US.
+        <a href="https://docs.apphud.com/docs/user-data">Apphud data policy</a>.
+      </li>
+      <li>
+        <b>Google Play Billing</b> — processes subscription payments. All
+        payment details (card number, billing address) are handled by Google,
+        not by the developer. The developer receives only order status, product
+        ID, and transaction token.
+      </li>
+      <li>
+        <b>Google AdMob</b> — serves advertisements to free users. Receives the
+        advertising identifier (AD_ID) and device information. Subject to your
+        consent where required. Subscribers see no ads.
         <a href="https://policies.google.com/technologies/partner-sites"
           >Google's partner policy</a
         >.
       </li>
       <li>
-        <b>Firebase Analytics</b> — collects anonymous usage data (screens
-        opened, interactions). Collection is disabled until consent is given in
-        regions where required.
+        <b>Firebase Analytics (GA4)</b> — collects usage data (screens opened,
+        interactions, in-app events). When linked to Google Ads, these events
+        support app campaigns measurement. Collection is disabled until consent
+        is given in regions where required.
       </li>
       <li>
         <b>Firebase Crashlytics</b> — collects crash reports and diagnostic data
@@ -218,22 +263,69 @@
         file.
       </li>
       <li>
-        <b>Nowhere else.</b> There is no MyMood server. Your entries are not
-        uploaded to any infrastructure owned by the developer.
+        <b>Apphud servers (EU and US).</b> Subscription and device data listed
+        in section 4 above. No diary content is sent to Apphud.
+      </li>
+      <li>
+        <b>Google servers.</b> Analytics events, crash reports, ad interactions,
+        and subscription order records, as described in section 4. No diary
+        content is sent to Google.
       </li>
     </ul>
 
-    <h2>6. Advertising and your consent</h2>
-    <p>MyMood is free and is funded by ads served by Google AdMob.</p>
+    <h2>6. Subscriptions</h2>
+    <p>
+      MyMood offers an optional Premium subscription that unlocks additional
+      features (photos in entries, statistics, daily reminders, Google Drive
+      backup and import, PIN lock, and an ad-free experience). The subscription
+      is billed weekly through Google Play.
+    </p>
+    <ul>
+      <li>
+        The exact price is shown on the subscription screen inside the app
+        before you purchase.
+      </li>
+      <li>
+        New subscribers may be offered a free trial. If you do not cancel before
+        the trial ends, the subscription converts to a paid weekly plan
+        automatically.
+      </li>
+      <li>
+        The subscription renews automatically each week until you cancel it.
+      </li>
+      <li>
+        <b>How to cancel:</b> open the Google Play Store app, tap your profile
+        icon, then go to <b>Payments &amp; subscriptions</b> &rarr;
+        <b>Subscriptions</b>, select MyMood, and tap Cancel.
+      </li>
+      <li>
+        Deleting the app or deleting your account data inside the app
+        <b>does not cancel</b> your subscription. You must cancel the
+        subscription separately in Google Play.
+      </li>
+    </ul>
+
+    <h2>7. Advertising, analytics and your consent</h2>
+    <p>
+      Free users see ads served by Google AdMob (banners and occasional
+      full-screen ads after saving an entry). Premium subscribers see no ads.
+    </p>
+    <p>
+      Firebase Analytics (GA4) collects usage events. When linked to Google Ads,
+      these events also support app campaigns measurement, subject to your
+      consent. Consent Mode v2 controls the analytics and advertising signals:
+      by default, all signals are denied until you make a choice.
+    </p>
     <p>
       If you are in the European Economic Area, the United Kingdom or
       Switzerland, the app shows you a consent dialog provided by Google's User
-      Messaging Platform before any ad is loaded. Nothing is collected for
-      advertising or analytics until you answer it. If you decline, no ads are
-      loaded and the analytics and advertising signals stay switched off.
+      Messaging Platform before any ad is loaded or any analytics data is
+      collected. If you decline, no ads are loaded and the analytics and
+      advertising signals stay switched off.
     </p>
     <p>
-      You can change your choice at any time: <b>Settings → Privacy options</b>.
+      You can change your choice at any time:
+      <b>Settings &rarr; Privacy options</b>.
     </p>
     <p>
       Google's own handling of advertising data is described at
@@ -242,7 +334,7 @@
       >.
     </p>
 
-    <h2>7. Permissions the app requests, and why</h2>
+    <h2>8. Permissions the app requests, and why</h2>
     <table>
       <tr>
         <th>Permission</th>
@@ -250,7 +342,11 @@
       </tr>
       <tr>
         <td>Internet, network state</td>
-        <td>Loading ads and syncing backups to your Drive</td>
+        <td>Loading ads, syncing backups, processing subscriptions</td>
+      </tr>
+      <tr>
+        <td>Billing</td>
+        <td>Processing subscription purchases through Google Play</td>
       </tr>
       <tr>
         <td>Camera</td>
@@ -269,7 +365,9 @@
       </tr>
       <tr>
         <td>Advertising ID</td>
-        <td>Showing ads, subject to your consent</td>
+        <td>
+          Showing ads and measuring app campaigns, subject to your consent
+        </td>
       </tr>
     </table>
     <p>
@@ -278,14 +376,15 @@
       the single image you selected.
     </p>
 
-    <h2>8. Deleting your data</h2>
+    <h2>9. Deleting your data</h2>
     <p>Two routes, both available to you at any time:</p>
     <ul>
       <li>
-        <b>Inside the app:</b> Settings → "Delete Account &amp; All Data". This
-        erases the local database, deletes the backup file and the
+        <b>Inside the app:</b> Settings &rarr; "Delete Account &amp; All Data".
+        This erases the local database, deletes the backup file and the
         <code>MyMoodApp|Backups</code> folder from your Google Drive, and
-        revokes the app's access to your Google account.
+        revokes the app's access to your Google account. The developer will also
+        request deletion of your data from Apphud.
       </li>
       <li>
         <b>Without the app:</b> see
@@ -295,24 +394,28 @@
       </li>
     </ul>
     <p>
+      <b>Subscriptions:</b> deleting your data does not cancel an active
+      subscription. Cancel it first in Google Play (see section 6).
+    </p>
+    <p>
       Uninstalling the app removes local data but does not remove a backup you
       previously created in your Drive — you can delete that file yourself, or
       use either route above.
     </p>
 
-    <h2>9. Children</h2>
+    <h2>10. Children</h2>
     <p>
       MyMood is not directed at children. The intended audience is 13 years and
       older. The developer does not knowingly collect data from children.
     </p>
 
-    <h2>10. Changes to this policy</h2>
+    <h2>11. Changes to this policy</h2>
     <p>
       If this policy changes, the new version will be published at this address
       with an updated date at the top.
     </p>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>
       Questions about this policy or about your data:
       <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.
@@ -332,8 +435,10 @@
       <b>Коротко.</b> Записи вашего дневника остаются на устройстве. В ваш
       Google Диск они попадают только тогда, когда вы сами нажимаете кнопку
       резервного копирования. Рекламодателям они не передаются, в аналитику не
-      попадают. Реклама и отчёты о сбоях в приложении есть — они описаны ниже
-      полностью.
+      попадают. Приложение предлагает платную подписку (Премиум) через Google
+      Play; оплата обрабатывается Google Play Billing, а управление подпиской
+      осуществляется через Apphud. Бесплатные пользователи видят рекламу. Всё
+      это подробно описано ниже.
     </div>
 
     <h2>1. Кто отвечает за приложение</h2>
@@ -377,22 +482,43 @@
         <td>Иллюстрации к вашим записям</td>
       </tr>
       <tr>
-        <td><b>Рекламный идентификатор (AD_ID)</b></td>
-        <td>Да</td>
-        <td><b>Да — в Google AdMob</b></td>
-        <td>Показ рекламы</td>
+        <td><b>История покупок</b> — статус подписки, записи о транзакциях</td>
+        <td>Да, если вы подписались</td>
+        <td><b>Да — Apphud, Google Play Billing</b></td>
+        <td>Обработка подписок и управление доступом к Премиум-функциям</td>
       </tr>
       <tr>
-        <td><b>Действия в приложении</b> — открытые экраны, взаимодействия</td>
-        <td>Да</td>
-        <td><b>Да — в Firebase Analytics</b></td>
-        <td>Понимание того, какие части приложения используются</td>
+        <td><b>Рекламный идентификатор (AD_ID)</b></td>
+        <td>Да, при наличии согласия</td>
+        <td><b>Да — в Google AdMob</b></td>
+        <td>Показ рекламы бесплатным пользователям</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Действия в приложении</b> — открытые экраны, взаимодействия,
+          события
+        </td>
+        <td>Да, при наличии согласия</td>
+        <td><b>Да — в Firebase Analytics (GA4)</b></td>
+        <td>
+          Понимание того, какие части приложения используются; измерение
+          рекламных кампаний
+        </td>
       </tr>
       <tr>
         <td><b>Данные о сбоях и диагностика</b></td>
         <td>Да</td>
         <td><b>Да — в Firebase Crashlytics</b></td>
         <td>Поиск и устранение сбоев</td>
+      </tr>
+      <tr>
+        <td>
+          <b>Информация об устройстве</b> — платформа, модель, версия ОС, версия
+          приложения, локаль, часовой пояс, страна, IP-адрес
+        </td>
+        <td>Да</td>
+        <td><b>Да — в Apphud</b></td>
+        <td>Управление подписками и аналитика подписок</td>
       </tr>
       <tr>
         <td><b>Имя и адрес электронной почты</b></td>
@@ -412,22 +538,42 @@
     </p>
 
     <h2>4. Сторонние сервисы (обработчики данных)</h2>
-    <p>
-      Приложение использует следующие сторонние сервисы, управляемые Google:
-    </p>
+    <p>Приложение использует следующие сторонние сервисы:</p>
     <ul>
       <li>
-        <b>Google AdMob</b> — показывает рекламу. Получает рекламный
-        идентификатор (AD_ID). Подчиняется вашему согласию там, где оно
-        требуется.
+        <b>Apphud</b> — управляет подписками и предоставляет аналитику подписок.
+        Получает: локаль, язык, часовой пояс, страну, IP-адрес, платформу,
+        семейство и модель устройства, версию ОС, текущую и первую версию
+        приложения, push-токен, идентификатор пользователя Apphud (UUID,
+        сбрасывается при каждой новой установке на Android), данные о покупках
+        (от SDK и серверных уведомлений Google), дату установки. Рекламный
+        идентификатор передаётся только после вашего согласия на измерение
+        рекламы. Apphud выступает обработчиком данных; данные хранятся в ЕС и
+        США.
+        <a href="https://docs.apphud.com/docs/user-data"
+          >Политика данных Apphud</a
+        >.
+      </li>
+      <li>
+        <b>Google Play Billing</b> — обрабатывает платежи за подписку. Все
+        платёжные данные (номер карты, адрес) обрабатывает Google, а не
+        разработчик. Разработчик получает только статус заказа, идентификатор
+        продукта и токен транзакции.
+      </li>
+      <li>
+        <b>Google AdMob</b> — показывает рекламу бесплатным пользователям.
+        Получает рекламный идентификатор (AD_ID) и информацию об устройстве.
+        Подчиняется вашему согласию там, где оно требуется. Подписчики не видят
+        рекламы.
         <a href="https://policies.google.com/technologies/partner-sites"
           >Политика партнёров Google</a
         >.
       </li>
       <li>
-        <b>Firebase Analytics</b> — собирает анонимные данные об использовании
-        (открытые экраны, взаимодействия). Сбор выключен до получения согласия в
-        регионах, где оно требуется.
+        <b>Firebase Analytics (GA4)</b> — собирает данные об использовании
+        (открытые экраны, взаимодействия, события в приложении). При связи с
+        Google Ads эти события поддерживают измерение рекламных кампаний. Сбор
+        выключен до получения согласия в регионах, где оно требуется.
       </li>
       <li>
         <b>Firebase Crashlytics</b> — собирает отчёты о сбоях и диагностические
@@ -462,23 +608,72 @@
         этот файл.
       </li>
       <li>
-        <b>Больше нигде.</b> Сервера MyMood не существует. Ваши записи не
-        загружаются ни на какую инфраструктуру разработчика.
+        <b>Серверы Apphud (ЕС и США).</b> Данные подписок и устройства,
+        перечисленные в разделе 4 выше. Содержимое дневника в Apphud не
+        передаётся.
+      </li>
+      <li>
+        <b>Серверы Google.</b> События аналитики, отчёты о сбоях, рекламные
+        взаимодействия и записи заказов подписки, описанные в разделе 4.
+        Содержимое дневника в Google не передаётся.
       </li>
     </ul>
 
-    <h2>6. Реклама и ваше согласие</h2>
-    <p>MyMood бесплатен и живёт за счёт рекламы Google AdMob.</p>
+    <h2>6. Подписки</h2>
+    <p>
+      MyMood предлагает подписку Премиум, которая открывает дополнительные
+      функции (фото в записях, статистика, ежедневные напоминания, резервное
+      копирование и восстановление из Google Диска, PIN-код, отсутствие
+      рекламы). Подписка оплачивается еженедельно через Google Play.
+    </p>
+    <ul>
+      <li>
+        Точная цена показывается на экране подписки внутри приложения до
+        покупки.
+      </li>
+      <li>
+        Новым подписчикам может быть предложен бесплатный пробный период. Если
+        вы не отмените подписку до окончания пробного периода, она автоматически
+        переходит в платную еженедельную.
+      </li>
+      <li>
+        Подписка автоматически продлевается каждую неделю, пока вы её не
+        отмените.
+      </li>
+      <li>
+        <b>Как отменить:</b> откройте приложение Google Play, нажмите на значок
+        профиля, затем перейдите в <b>Платежи и подписки</b> &rarr;
+        <b>Подписки</b>, выберите MyMood и нажмите «Отменить».
+      </li>
+      <li>
+        Удаление приложения или удаление данных внутри приложения
+        <b>не отменяет</b> подписку. Подписку необходимо отменить отдельно в
+        Google Play.
+      </li>
+    </ul>
+
+    <h2>7. Реклама, аналитика и ваше согласие</h2>
+    <p>
+      Бесплатные пользователи видят рекламу Google AdMob (баннеры и
+      полноэкранную рекламу после сохранения записи). Подписчики Премиум не
+      видят рекламы.
+    </p>
+    <p>
+      Firebase Analytics (GA4) собирает события использования. При связи с
+      Google Ads эти события поддерживают измерение рекламных кампаний, с учётом
+      вашего согласия. Consent Mode v2 управляет аналитическими и рекламными
+      сигналами: по умолчанию все сигналы отключены до вашего выбора.
+    </p>
     <p>
       Если вы находитесь в Европейской экономической зоне, Великобритании или
       Швейцарии, приложение показывает диалог согласия Google User Messaging
-      Platform до загрузки любой рекламы. До вашего ответа ничего не собирается
-      ни для рекламы, ни для аналитики. Если вы отказываетесь, реклама не
-      загружается, а рекламные и аналитические сигналы остаются выключенными.
+      Platform до загрузки любой рекламы и сбора аналитических данных. Если вы
+      отказываетесь, реклама не загружается, а аналитические и рекламные сигналы
+      остаются выключенными.
     </p>
     <p>
       Изменить выбор можно в любой момент:
-      <b>Настройки → Настройки приватности</b>.
+      <b>Настройки &rarr; Настройки приватности</b>.
     </p>
     <p>
       Как Google обрабатывает рекламные данные:
@@ -487,7 +682,7 @@
       >.
     </p>
 
-    <h2>7. Запрашиваемые разрешения</h2>
+    <h2>8. Запрашиваемые разрешения</h2>
     <table>
       <tr>
         <th>Разрешение</th>
@@ -495,7 +690,11 @@
       </tr>
       <tr>
         <td>Интернет, состояние сети</td>
-        <td>Загрузка рекламы и синхронизация копий с вашим Диском</td>
+        <td>Загрузка рекламы, синхронизация копий, обработка подписок</td>
+      </tr>
+      <tr>
+        <td>Биллинг</td>
+        <td>Обработка покупок подписки через Google Play</td>
       </tr>
       <tr>
         <td>Камера</td>
@@ -514,7 +713,9 @@
       </tr>
       <tr>
         <td>Рекламный идентификатор</td>
-        <td>Показ рекламы, с учётом вашего согласия</td>
+        <td>
+          Показ рекламы и измерение рекламных кампаний, с учётом вашего согласия
+        </td>
       </tr>
     </table>
     <p>
@@ -523,14 +724,15 @@
       приложению только выбранное вами изображение.
     </p>
 
-    <h2>8. Удаление данных</h2>
+    <h2>9. Удаление данных</h2>
     <p>Два пути, доступные в любой момент:</p>
     <ul>
       <li>
-        <b>В приложении:</b> Настройки → «Удалить аккаунт и все данные».
+        <b>В приложении:</b> Настройки &rarr; «Удалить аккаунт и все данные».
         Стирается локальная база, из вашего Google Диска удаляются файл
         резервной копии и папка <code>MyMoodApp|Backups</code>, отзывается
-        доступ приложения к вашему аккаунту Google.
+        доступ приложения к вашему аккаунту Google. Разработчик также запросит
+        удаление ваших данных из Apphud.
       </li>
       <li>
         <b>Без приложения:</b>
@@ -540,24 +742,28 @@
       </li>
     </ul>
     <p>
+      <b>Подписки:</b> удаление данных не отменяет активную подписку. Сначала
+      отмените её в Google Play (см. раздел 6).
+    </p>
+    <p>
       Удаление приложения стирает локальные данные, но не удаляет резервную
       копию, которую вы ранее создали в Диске, — её можно удалить самостоятельно
       либо любым из способов выше.
     </p>
 
-    <h2>9. Дети</h2>
+    <h2>10. Дети</h2>
     <p>
       MyMood не предназначен для детей. Целевая аудитория — 13 лет и старше.
       Разработчик сознательно не собирает данные детей.
     </p>
 
-    <h2>10. Изменения политики</h2>
+    <h2>11. Изменения политики</h2>
     <p>
       При изменении политики новая версия публикуется по этому же адресу с
       обновлённой датой вверху страницы.
     </p>
 
-    <h2>11. Связь</h2>
+    <h2>12. Связь</h2>
     <p>
       Вопросы по политике и по вашим данным:
       <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.

@@ -35,6 +35,13 @@
         margin: 20px 0;
         border-radius: 4px;
       }
+      .warning {
+        background: #fef9e7;
+        border-left: 4px solid #f39c12;
+        padding: 16px 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
       .lang-switch {
         margin: 20px 0 30px;
         font-size: 0.95em;
@@ -80,6 +87,17 @@
       can delete all of it using either method below.
     </p>
 
+    <div class="warning">
+      <h3>Cancel your subscription first</h3>
+      <p>
+        Deleting your account data <b>does not cancel</b> an active
+        subscription. If you have a Premium subscription, cancel it before
+        deleting your data: open the Google Play Store app, tap your profile
+        icon, then go to <b>Payments &amp; subscriptions</b> &rarr;
+        <b>Subscriptions</b>, select MyMood, and tap Cancel.
+      </p>
+    </div>
+
     <div class="card">
       <h3>What gets deleted</h3>
       <ul>
@@ -97,13 +115,32 @@
           Google Drive is revoked.
         </li>
         <li><b>App settings:</b> reminders, language preference, PIN lock.</li>
+        <li>
+          <b>Apphud data:</b> subscription analytics data that Apphud holds
+          about you (locale, device info, purchase history, Apphud user ID). The
+          developer requests deletion from Apphud on your behalf.
+        </li>
       </ul>
       <p>
-        <b>What the developer cannot delete for you:</b> your Android
-        advertising ID (you can reset it yourself in your device settings) and
-        aggregated analytics data that Firebase retains temporarily (it
-        auto-expires based on the project's retention settings).
+        <b>What the developer cannot delete for you:</b>
       </p>
+      <ul>
+        <li>
+          <b>Google Play order records:</b> Google retains its own record of
+          your subscription purchases. These are part of your Google account and
+          can be viewed in Google Play &rarr; Payments &amp; subscriptions
+          &rarr; Budget &amp; history. The developer has no ability to remove
+          them from Google's systems.
+        </li>
+        <li>
+          <b>Android advertising ID:</b> you can reset it yourself in your
+          device settings.
+        </li>
+        <li>
+          <b>Aggregated analytics data:</b> Firebase retains it temporarily (it
+          auto-expires based on the project's retention settings).
+        </li>
+      </ul>
     </div>
 
     <h2>How to delete your data</h2>
@@ -137,7 +174,8 @@
     </ol>
     <p>
       We will process your request within <b>7 business days</b> and confirm by
-      email when it is complete.
+      email when it is complete. This includes requesting deletion of your data
+      from Apphud.
     </p>
 
     <hr />
@@ -153,6 +191,17 @@
       Вы полностью контролируете свои личные данные в MyMood. Удалить их можно
       любым из двух способов ниже.
     </p>
+
+    <div class="warning">
+      <h3>Сначала отмените подписку</h3>
+      <p>
+        Удаление данных аккаунта <b>не отменяет</b> активную подписку. Если у
+        вас есть подписка Премиум, отмените её до удаления данных: откройте
+        приложение Google Play, нажмите на значок профиля, затем перейдите в
+        <b>Платежи и подписки</b> &rarr; <b>Подписки</b>, выберите MyMood и
+        нажмите «Отменить».
+      </p>
+    </div>
 
     <div class="card">
       <h3>Что удаляется</h3>
@@ -172,14 +221,32 @@
           вашим Google Диском отзывается.
         </li>
         <li><b>Настройки приложения:</b> напоминания, язык, PIN-код.</li>
+        <li>
+          <b>Данные Apphud:</b> аналитические данные подписок, которые Apphud
+          хранит о вас (локаль, информация об устройстве, история покупок,
+          идентификатор пользователя Apphud). Разработчик запрашивает удаление
+          из Apphud от вашего имени.
+        </li>
       </ul>
       <p>
-        <b>Что разработчик не может удалить за вас:</b> ваш рекламный
-        идентификатор Android (его можно сбросить самостоятельно в настройках
-        устройства) и агрегированные данные аналитики, которые Firebase хранит
-        временно (они автоматически удаляются согласно настройкам хранения
-        проекта).
+        <b>Что разработчик не может удалить за вас:</b>
       </p>
+      <ul>
+        <li>
+          <b>Записи заказов Google Play:</b> Google хранит собственные записи о
+          ваших покупках подписки. Они являются частью вашего аккаунта Google и
+          доступны в Google Play &rarr; Платежи и подписки &rarr; Бюджет и
+          история. У разработчика нет возможности удалить их из систем Google.
+        </li>
+        <li>
+          <b>Рекламный идентификатор Android:</b> его можно сбросить
+          самостоятельно в настройках устройства.
+        </li>
+        <li>
+          <b>Агрегированные данные аналитики:</b> Firebase хранит их временно
+          (они автоматически удаляются согласно настройкам хранения проекта).
+        </li>
+      </ul>
     </div>
 
     <h2>Как удалить данные</h2>
@@ -213,7 +280,7 @@
     </ol>
     <p>
       Мы обработаем ваш запрос в течение <b>7 рабочих дней</b> и подтвердим по
-      электронной почте.
+      электронной почте. Это включает запрос на удаление ваших данных из Apphud.
     </p>
 
     <footer>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyMood — Account & Data Deletion Request</title>
+    <title>My Mood simple Tracker &amp; Diary — Delete your data</title>
     <style>
       body {
         font-family:
@@ -74,214 +74,285 @@
     </style>
   </head>
   <body>
-    <h1>MyMood: Simple Tracker &amp; Diary</h1>
-    <h2>Account and Data Deletion Request</h2>
+    <h1>My Mood simple Tracker &amp; Diary</h1>
+    <h2>Delete your account and data</h2>
     <p>
-      <b>Last updated:</b> 23 September 2026 · <b>Application:</b>
-      <code>com.klapp.mymood</code>
+      <b>App:</b> My Mood simple Tracker &amp; Diary (MyMood) on Google Play,
+      <code>com.klapp.mymood</code> · <b>Developer:</b> KLapp ·
+      <b>Last updated:</b> 24 September 2026
     </p>
     <p class="lang-switch"><a href="#ru">Русская версия ниже ↓</a></p>
 
     <p>
-      You have full control over your personal data associated with MyMood. You
-      can delete all of it using either method below.
+      MyMood has no user accounts and no server of its own: your diary lives on
+      your phone and, if you turned on the backup, in your own Google Drive.
+      This page explains how to delete all of it, with or without the app.
     </p>
 
     <div class="warning">
-      <h3>Cancel your subscription first</h3>
+      <h3>Step 1. Cancel your subscription first</h3>
       <p>
-        Deleting your account data <b>does not cancel</b> an active
-        subscription. If you have a Premium subscription, cancel it before
-        deleting your data: open the Google Play Store app, tap your profile
-        icon, then go to <b>Payments &amp; subscriptions</b> &rarr;
-        <b>Subscriptions</b>, select MyMood, and tap Cancel.
+        Deleting your data or uninstalling the app <b>does not cancel</b> a
+        subscription, and Google Play keeps charging until you cancel. Open
+        <a href="https://play.google.com/store/account/subscriptions"
+          >play.google.com/store/account/subscriptions</a
+        >, or in the Google Play Store app tap your profile picture &rarr;
+        <b>Payments &amp; subscriptions &rarr; Subscriptions</b>, choose MyMood
+        and tap <b>Cancel subscription</b>.
       </p>
     </div>
+
+    <h2>Step 2. Delete the data on your phone</h2>
+    <h3>With the app (instant, free for everyone)</h3>
+    <ol>
+      <li>Open MyMood and go to <b>Settings</b>.</li>
+      <li>Tap <b>Delete account &amp; all data</b> and confirm.</li>
+    </ol>
+    <p>
+      This erases every entry, note, photo, the PIN code and all settings on the
+      phone, cancels the reminders, deletes the backup file and folder from your
+      Google Drive, and removes the app's access to your Google account. The app
+      then starts as if newly installed.
+    </p>
+    <h3>Without the app</h3>
+    <p>
+      Uninstalling MyMood deletes everything it stored on the phone: entries,
+      notes, photos, the PIN code and settings. MyMood keeps this data out of
+      Android's device backup and phone-to-phone transfer, so reinstalling the
+      app or moving to a new phone does not bring it back.
+    </p>
+
+    <h2>Step 3. Delete the backup in your Google Drive</h2>
+    <p>
+      If you ever turned on <b>Backup to Google Drive</b>, a copy of your
+      entries is in your own Google Drive. The developer cannot see or delete it
+      for you, so remove it yourself:
+    </p>
+    <ol>
+      <li>
+        Open <a href="https://drive.google.com">drive.google.com</a> (or the
+        Google Drive app) with the Google account you used for the backup.
+      </li>
+      <li>
+        Find the folder <code>MyMoodApp|Backups</code> (it holds
+        <code>mymood-backup.txt</code>) and delete it.
+      </li>
+      <li>Empty the Drive trash, or the copy stays there for 30 days.</li>
+      <li>
+        To remove the app's access to your Google account too, open
+        <a href="https://myaccount.google.com/connections"
+          >myaccount.google.com/connections</a
+        >, choose MyMood and remove its access.
+      </li>
+    </ol>
+    <p>The in-app button in step 2 does all of this for you.</p>
+
+    <h2>Step 4. Ask us to delete subscription and analytics records</h2>
+    <p>
+      Two services keep records about the app's use that are not on your phone:
+      <b>Apphud</b>, which manages subscriptions for us (purchase history,
+      device information, a random Apphud user ID), and
+      <b>Google Analytics for Firebase</b> (usage events and random app
+      identifiers). The app has no account, so these records are not linked to
+      your name or email. To find yours, we need the order number of your
+      subscription.
+    </p>
+    <ol>
+      <li>
+        Email <a href="mailto:applarik@gmail.com">applarik@gmail.com</a> with
+        the subject <b>MyMood data deletion</b>.
+      </li>
+      <li>
+        If you ever subscribed or started a trial, include your
+        <b>Google Play order number</b>. It starts with <code>GPA.</code> and is
+        in the receipt email from Google Play, or in the Play Store app under
+        profile picture &rarr;
+        <b>Payments &amp; subscriptions &rarr; Budget &amp; history</b>. It is
+        the only identifier you still have after uninstalling the app.
+      </li>
+      <li>
+        If you never subscribed, just send the email; we will delete what we can
+        match and tell you what that was.
+      </li>
+    </ol>
+    <p>
+      <b>Response time:</b> we reply within 7 business days and complete the
+      deletion within 30 days, including the deletion request we pass to Apphud.
+      We confirm by email when it is done.
+    </p>
 
     <div class="card">
-      <h3>What gets deleted</h3>
+      <h3>What is kept, and for how long</h3>
       <ul>
         <li>
-          <b>Local journal entries:</b> all moods, notes, emotions, tags and
-          timestamps stored on your device (Hive database).
+          <b>Google Play order records</b> are kept by Google as the merchant,
+          under Google's privacy policy. The developer cannot delete them.
         </li>
         <li>
-          <b>Cloud backup:</b> the <code>mymood-backup.txt</code> file and the
-          <code>MyMoodApp|Backups</code> folder that MyMood created in your
-          Google Drive.
+          <b>Crash reports</b> (Firebase Crashlytics) are deleted automatically
+          after 90 days.
         </li>
         <li>
-          <b>Google account access:</b> the app's permission to access your
-          Google Drive is revoked.
+          <b>Google Analytics</b> user and event data is deleted automatically
+          within about 15 months after you last used the app (a 14-month
+          retention period plus Google's monthly clean-up).
         </li>
-        <li><b>App settings:</b> reminders, language preference, PIN lock.</li>
         <li>
-          <b>Apphud data:</b> subscription analytics data that Apphud holds
-          about you (locale, device info, purchase history, Apphud user ID). The
-          developer requests deletion from Apphud on your behalf.
+          <b>Advertising data</b> is kept by Google AdMob under Google's
+          retention rules. You can reset or delete your advertising ID in your
+          phone's settings.
         </li>
       </ul>
       <p>
-        <b>What the developer cannot delete for you:</b>
+        Details: <a href="privacy-policy.html">Privacy Policy</a>, sections 9
+        and 10.
       </p>
-      <ul>
-        <li>
-          <b>Google Play order records:</b> Google retains its own record of
-          your subscription purchases. These are part of your Google account and
-          can be viewed in Google Play &rarr; Payments &amp; subscriptions
-          &rarr; Budget &amp; history. The developer has no ability to remove
-          them from Google's systems.
-        </li>
-        <li>
-          <b>Android advertising ID:</b> you can reset it yourself in your
-          device settings.
-        </li>
-        <li>
-          <b>Aggregated analytics data:</b> Firebase retains it temporarily (it
-          auto-expires based on the project's retention settings).
-        </li>
-      </ul>
     </div>
-
-    <h2>How to delete your data</h2>
-
-    <h3>Method 1: In the app (instant)</h3>
-    <ol>
-      <li>Open the <b>MyMood</b> application on your Android device.</li>
-      <li>Go to <b>Settings</b> (gear icon).</li>
-      <li>
-        Tap <b>"Delete Account &amp; All Data"</b> and confirm the prompt.
-      </li>
-    </ol>
-    <p>
-      This instantly wipes your local database, deletes the backup file and
-      folder from your Google Drive, revokes the app's access to your Google
-      account, and cancels any scheduled reminders. After deletion, the app
-      returns to its first-launch state.
-    </p>
-
-    <h3>Method 2: By email (if you no longer have the app)</h3>
-    <ol>
-      <li>
-        Send an email to
-        <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.
-      </li>
-      <li>Subject line: <b>MyMood Data Deletion Request</b></li>
-      <li>
-        Include the Google email address you used for Cloud Backup in the app
-        (if applicable).
-      </li>
-    </ol>
-    <p>
-      We will process your request within <b>7 business days</b> and confirm by
-      email when it is complete. This includes requesting deletion of your data
-      from Apphud.
-    </p>
 
     <hr />
 
-    <h1 id="ru">MyMood: Simple Tracker &amp; Diary</h1>
-    <h2>Запрос на удаление аккаунта и данных</h2>
+    <div lang="ru">
+    <h1 id="ru">My Mood simple Tracker &amp; Diary</h1>
+    <h2>Удаление аккаунта и данных</h2>
     <p>
-      <b>Обновлено:</b> 23 сентября 2026 г. · <b>Приложение:</b>
-      <code>com.klapp.mymood</code>
+      <b>Приложение:</b> My Mood simple Tracker &amp; Diary (MyMood) в Google
+      Play, <code>com.klapp.mymood</code> · <b>Разработчик:</b> KLapp ·
+      <b>Обновлено:</b> 24 сентября 2026 г.
     </p>
 
     <p>
-      Вы полностью контролируете свои личные данные в MyMood. Удалить их можно
-      любым из двух способов ниже.
+      У MyMood нет учётных записей пользователей и собственного сервера: дневник
+      хранится на вашем телефоне и, если вы включали резервное копирование, в
+      вашем собственном Google Диске. Здесь описано, как удалить всё это — с
+      приложением или без него.
     </p>
 
     <div class="warning">
-      <h3>Сначала отмените подписку</h3>
+      <h3>Шаг 1. Сначала отмените подписку</h3>
       <p>
-        Удаление данных аккаунта <b>не отменяет</b> активную подписку. Если у
-        вас есть подписка Премиум, отмените её до удаления данных: откройте
-        приложение Google Play, нажмите на значок профиля, затем перейдите в
-        <b>Платежи и подписки</b> &rarr; <b>Подписки</b>, выберите MyMood и
-        нажмите «Отменить».
+        Удаление данных или приложения <b>не отменяет</b> подписку: Google Play
+        продолжит списывать оплату, пока вы её не отмените. Откройте
+        <a href="https://play.google.com/store/account/subscriptions"
+          >play.google.com/store/account/subscriptions</a
+        >
+        или в приложении Google Play нажмите на фото профиля &rarr;
+        <b>Платежи и подписки &rarr; Подписки</b>, выберите MyMood и нажмите
+        <b>Отменить подписку</b>.
       </p>
     </div>
+
+    <h2>Шаг 2. Удалите данные на телефоне</h2>
+    <h3>В приложении (сразу, бесплатно для всех)</h3>
+    <ol>
+      <li>Откройте MyMood и перейдите в <b>Настройки</b>.</li>
+      <li>Нажмите <b>Удалить аккаунт и все данные</b> и подтвердите.</li>
+    </ol>
+    <p>
+      Стираются все записи, заметки, фотографии, PIN-код и настройки на
+      телефоне, отменяются напоминания, из вашего Google Диска удаляются файл и
+      папка резервной копии, а доступ приложения к вашему аккаунту Google
+      отзывается. После этого приложение запускается как только что
+      установленное.
+    </p>
+    <h3>Без приложения</h3>
+    <p>
+      Удаление MyMood с телефона стирает всё, что приложение там хранило:
+      записи, заметки, фотографии, PIN-код и настройки. MyMood исключает эти
+      данные из системной резервной копии Android и из переноса на новый
+      телефон, поэтому после повторной установки или смены телефона они не
+      вернутся.
+    </p>
+
+    <h2>Шаг 3. Удалите резервную копию в Google Диске</h2>
+    <p>
+      Если вы когда-либо включали <b>Резервное копирование на Google Drive</b>,
+      копия ваших записей лежит в вашем собственном Google Диске. Разработчик не
+      видит её и не может удалить за вас, поэтому удалите её сами:
+    </p>
+    <ol>
+      <li>
+        Откройте <a href="https://drive.google.com">drive.google.com</a> (или
+        приложение Google Диск) под аккаунтом Google, который использовался для
+        копии.
+      </li>
+      <li>
+        Найдите папку <code>MyMoodApp|Backups</code> (в ней файл
+        <code>mymood-backup.txt</code>) и удалите её.
+      </li>
+      <li>Очистите корзину Диска, иначе копия пролежит там ещё 30 дней.</li>
+      <li>
+        Чтобы отозвать и доступ приложения к аккаунту Google, откройте
+        <a href="https://myaccount.google.com/connections"
+          >myaccount.google.com/connections</a
+        >, выберите MyMood и удалите доступ.
+      </li>
+    </ol>
+    <p>Кнопка в приложении из шага 2 делает всё это за вас.</p>
+
+    <h2>Шаг 4. Попросите нас удалить записи о подписке и аналитике</h2>
+    <p>
+      Два сервиса хранят сведения об использовании приложения вне вашего
+      телефона: <b>Apphud</b>, который управляет подписками (история покупок,
+      сведения об устройстве, случайный идентификатор Apphud), и
+      <b>Google Analytics для Firebase</b> (события использования и случайные
+      идентификаторы приложения). Учётных записей в приложении нет, поэтому эти
+      данные не связаны с вашим именем или почтой. Чтобы найти ваши, нам нужен
+      номер заказа подписки.
+    </p>
+    <ol>
+      <li>
+        Напишите на <a href="mailto:applarik@gmail.com">applarik@gmail.com</a> с
+        темой <b>MyMood data deletion</b>.
+      </li>
+      <li>
+        Если вы оформляли подписку или пробный период, укажите
+        <b>номер заказа Google Play</b>. Он начинается с <code>GPA.</code> и
+        есть в письме-чеке от Google Play или в приложении Google Play: фото
+        профиля &rarr; <b>Платежи и подписки &rarr; Бюджет и история</b>. Это
+        единственный идентификатор, который остаётся у вас после удаления
+        приложения.
+      </li>
+      <li>
+        Если подписки не было, просто отправьте письмо: мы удалим всё, что
+        сможем сопоставить, и сообщим, что именно.
+      </li>
+    </ol>
+    <p>
+      <b>Сроки:</b> мы отвечаем в течение 7 рабочих дней и завершаем удаление в
+      течение 30 дней, включая запрос на удаление, который мы передаём в Apphud.
+      Когда всё готово, мы подтверждаем это письмом.
+    </p>
 
     <div class="card">
-      <h3>Что удаляется</h3>
+      <h3>Что сохраняется и как долго</h3>
       <ul>
         <li>
-          <b>Локальные записи дневника:</b> все оценки настроения, заметки,
-          эмоции, теги и метки времени, хранящиеся на устройстве (база данных
-          Hive).
+          <b>Записи о заказах Google Play</b> хранит Google как продавец, по
+          своей политике конфиденциальности. Разработчик удалить их не может.
         </li>
         <li>
-          <b>Облачная резервная копия:</b> файл <code>mymood-backup.txt</code> и
-          папка <code>MyMoodApp|Backups</code>, созданные приложением в вашем
-          Google Диске.
+          <b>Отчёты о сбоях</b> (Firebase Crashlytics) удаляются автоматически
+          через 90 дней.
         </li>
         <li>
-          <b>Доступ к аккаунту Google:</b> разрешение приложения на работу с
-          вашим Google Диском отзывается.
+          Данные пользователей и событий <b>Google Analytics</b> удаляются
+          автоматически в течение примерно 15 месяцев после того, как вы в
+          последний раз открывали приложение (срок хранения 14 месяцев плюс
+          ежемесячная очистка Google).
         </li>
-        <li><b>Настройки приложения:</b> напоминания, язык, PIN-код.</li>
         <li>
-          <b>Данные Apphud:</b> аналитические данные подписок, которые Apphud
-          хранит о вас (локаль, информация об устройстве, история покупок,
-          идентификатор пользователя Apphud). Разработчик запрашивает удаление
-          из Apphud от вашего имени.
+          <b>Рекламные данные</b> Google AdMob хранит по правилам хранения
+          Google. Рекламный идентификатор можно сбросить или удалить в
+          настройках телефона.
         </li>
       </ul>
       <p>
-        <b>Что разработчик не может удалить за вас:</b>
+        Подробнее:
+        <a href="privacy-policy.html#ru">Политика конфиденциальности</a>,
+        разделы 9 и 10.
       </p>
-      <ul>
-        <li>
-          <b>Записи заказов Google Play:</b> Google хранит собственные записи о
-          ваших покупках подписки. Они являются частью вашего аккаунта Google и
-          доступны в Google Play &rarr; Платежи и подписки &rarr; Бюджет и
-          история. У разработчика нет возможности удалить их из систем Google.
-        </li>
-        <li>
-          <b>Рекламный идентификатор Android:</b> его можно сбросить
-          самостоятельно в настройках устройства.
-        </li>
-        <li>
-          <b>Агрегированные данные аналитики:</b> Firebase хранит их временно
-          (они автоматически удаляются согласно настройкам хранения проекта).
-        </li>
-      </ul>
     </div>
-
-    <h2>Как удалить данные</h2>
-
-    <h3>Способ 1: В приложении (моментально)</h3>
-    <ol>
-      <li>Откройте приложение <b>MyMood</b> на вашем Android-устройстве.</li>
-      <li>Перейдите в <b>Настройки</b> (значок шестерёнки).</li>
-      <li>
-        Нажмите <b>«Удалить аккаунт и все данные»</b> и подтвердите действие.
-      </li>
-    </ol>
-    <p>
-      Это мгновенно стирает локальную базу данных, удаляет файл и папку
-      резервной копии из вашего Google Диска, отзывает доступ приложения к
-      вашему аккаунту Google и отменяет запланированные напоминания. После
-      удаления приложение возвращается в состояние первого запуска.
-    </p>
-
-    <h3>Способ 2: По электронной почте (если приложение удалено)</h3>
-    <ol>
-      <li>
-        Отправьте письмо на
-        <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.
-      </li>
-      <li>Тема письма: <b>MyMood Data Deletion Request</b></li>
-      <li>
-        Укажите адрес электронной почты Google, который использовали для
-        резервного копирования (если применимо).
-      </li>
-    </ol>
-    <p>
-      Мы обработаем ваш запрос в течение <b>7 рабочих дней</b> и подтвердим по
-      электронной почте. Это включает запрос на удаление ваших данных из Apphud.
-    </p>
+    </div>
 
     <footer>
       <p>

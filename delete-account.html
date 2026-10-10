@@ -71,6 +71,13 @@
         border-top: 1px solid #ecf0f1;
         padding-top: 15px;
       }
+      .legacy {
+        background: #fff8e6;
+        border-left: 4px solid #e0a800;
+        padding: 4px 20px 8px;
+        margin: 28px 0;
+        border-radius: 4px;
+      }
     </style>
   </head>
   <body>
@@ -79,7 +86,7 @@
     <p>
       <b>App:</b> My Mood simple Tracker &amp; Diary (MyMood) on Google Play,
       <code>com.klapp.mymood</code> · <b>Developer:</b> KLapp ·
-      <b>Last updated:</b> 24 September 2026
+      <b>Last updated:</b> 10 October 2026
     </p>
     <p class="lang-switch"><a href="#ru">Русская версия ниже ↓</a></p>
 
@@ -109,15 +116,18 @@
       <li>Tap <b>Delete account &amp; all data</b> and confirm.</li>
     </ol>
     <p>
-      This erases every entry, note, photo, the PIN code and all settings on the
-      phone, cancels the reminders, deletes the backup file and folder from your
-      Google Drive, and removes the app's access to your Google account. The app
-      then starts as if newly installed.
+      This erases every entry with its note, emotions and tags, your list of
+      activities and tags, every photo, the PIN code, your ads measurement
+      choice and all settings on the phone, cancels the reminders, clears the
+      home-screen widget, deletes the backup file and folder from your Google
+      Drive, and removes the app's access to your Google account. The app then
+      starts as if newly installed.
     </p>
     <h3>Without the app</h3>
     <p>
       Uninstalling MyMood deletes everything it stored on the phone: entries,
-      notes, photos, the PIN code and settings. MyMood keeps this data out of
+      notes, emotions, tags, photos, the PIN code and settings, and the
+      home-screen widget goes with the app. MyMood keeps this data out of
       Android's device backup and phone-to-phone transfer, so reinstalling the
       app or moving to a new phone does not bring it back.
     </p>
@@ -125,8 +135,9 @@
     <h2>Step 3. Delete the backup in your Google Drive</h2>
     <p>
       If you ever turned on <b>Backup to Google Drive</b>, a copy of your
-      entries is in your own Google Drive. The developer cannot see or delete it
-      for you, so remove it yourself:
+      entries, with their emotions and tags, is in your own Google Drive.
+      Photos are never part of it. The developer cannot see or delete it for
+      you, so remove it yourself:
     </p>
     <ol>
       <li>
@@ -153,7 +164,8 @@
       <b>Apphud</b>, which manages subscriptions for us (purchase history,
       device information, a random Apphud user ID), and
       <b>Google Analytics for Firebase</b> (usage events and random app
-      identifiers). The app has no account, so these records are not linked to
+      identifiers, which our linked Google Ads account also uses to measure our
+      ad campaigns). The app has no account, so these records are not linked to
       your name or email. To find yours, we need the order number of your
       subscription.
     </p>
@@ -198,10 +210,22 @@
           retention period plus Google's monthly clean-up).
         </li>
         <li>
-          <b>Advertising data</b> is kept by Google AdMob under Google's
-          retention rules. You can reset or delete your advertising ID in your
-          phone's settings.
+          <b>Ad campaign measurement</b> data in Google Ads is kept under
+          Google's retention rules. You can switch ads measurement off in the
+          app (Settings &rarr; Ads measurement and personalization) and reset or
+          delete your advertising ID in your phone's settings.
         </li>
+        <!-- OLDER-VERSIONS:BEGIN (marked paragraph, V27-REL-006 Values; shortened at PLAN step 7.10) -->
+        <li class="legacy">
+          <b>Versions 1.3.0 and earlier only:</b> those versions show ads from
+          Google AdMob, and Google AdMob keeps the advertising data it collects
+          under Google's retention rules. You can reset or delete your
+          advertising ID in your phone's settings. Version 1.4.0 and later
+          contain no ads software (<a href="privacy-policy.html#older-versions"
+            >Privacy Policy, section 15</a
+          >).
+        </li>
+        <!-- OLDER-VERSIONS:END -->
       </ul>
       <p>
         Details: <a href="privacy-policy.html">Privacy Policy</a>, sections 9
@@ -213,143 +237,74 @@
 
     <div lang="ru">
     <h1 id="ru">My Mood simple Tracker &amp; Diary</h1>
-    <h2>Удаление аккаунта и данных</h2>
+    <h2>Удаление аккаунта и&nbsp;данных</h2>
     <p>
-      <b>Приложение:</b> My Mood simple Tracker &amp; Diary (MyMood) в Google
-      Play, <code>com.klapp.mymood</code> · <b>Разработчик:</b> KLapp ·
-      <b>Обновлено:</b> 24 сентября 2026 г.
+      <b>Приложение:</b> My Mood simple Tracker &amp; Diary (MyMood) в&nbsp;Google Play, <code>com.klapp.mymood</code> · <b>Разработчик:</b> KLapp · <b>Обновлено:</b> 9&nbsp;октября 2026&nbsp;г.
     </p>
 
     <p>
-      У MyMood нет учётных записей пользователей и собственного сервера: дневник
-      хранится на вашем телефоне и, если вы включали резервное копирование, в
-      вашем собственном Google Диске. Здесь описано, как удалить всё это — с
-      приложением или без него.
+      У&nbsp;MyMood нет учётных записей пользователей и&nbsp;собственного сервера: дневник хранится на вашем телефоне и, если вы включали резервное копирование, в&nbsp;вашем собственном Google Диске. Здесь описано, как удалить всё это&nbsp;— с&nbsp;приложением или без него.
     </p>
 
     <div class="warning">
       <h3>Шаг 1. Сначала отмените подписку</h3>
       <p>
-        Удаление данных или приложения <b>не отменяет</b> подписку: Google Play
-        продолжит списывать оплату, пока вы её не отмените. Откройте
-        <a href="https://play.google.com/store/account/subscriptions"
-          >play.google.com/store/account/subscriptions</a
-        >
-        или в приложении Google Play нажмите на фото профиля &rarr;
-        <b>Платежи и подписки &rarr; Подписки</b>, выберите MyMood и нажмите
-        <b>Отменить подписку</b>.
+        Удаление данных или приложения <b>не отменяет</b> подписку: Google Play продолжит списывать оплату, пока вы её не отмените. Откройте <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a> или в&nbsp;приложении Google Play нажмите на фото профиля &rarr; <b>Платежи и&nbsp;подписки &rarr; Подписки</b>, выберите MyMood и&nbsp;нажмите <b>Отменить подписку</b>.
       </p>
     </div>
 
     <h2>Шаг 2. Удалите данные на телефоне</h2>
-    <h3>В приложении (сразу, бесплатно для всех)</h3>
+    <h3>В&nbsp;приложении (сразу, бесплатно для всех)</h3>
     <ol>
-      <li>Откройте MyMood и перейдите в <b>Настройки</b>.</li>
-      <li>Нажмите <b>Удалить аккаунт и все данные</b> и подтвердите.</li>
+      <li>Откройте MyMood и&nbsp;перейдите в&nbsp;<b>Настройки</b>.</li>
+      <li>Нажмите <b>Удалить аккаунт и&nbsp;все данные</b> и&nbsp;подтвердите.</li>
     </ol>
     <p>
-      Стираются все записи, заметки, фотографии, PIN-код и настройки на
-      телефоне, отменяются напоминания, из вашего Google Диска удаляются файл и
-      папка резервной копии, а доступ приложения к вашему аккаунту Google
-      отзывается. После этого приложение запускается как только что
-      установленное.
+      Стираются все записи с&nbsp;заметками, эмоциями и&nbsp;тегами, список занятий и&nbsp;тегов, все фотографии, PIN-код, ваш выбор насчёт измерения рекламы и&nbsp;все настройки на телефоне, отменяются напоминания, очищается виджет на главном экране, из вашего Google Диска удаляются файл и&nbsp;папка резервной копии, а&nbsp;доступ приложения к&nbsp;вашему аккаунту Google отзывается. После этого приложение запускается как только что установленное.
     </p>
     <h3>Без приложения</h3>
     <p>
-      Удаление MyMood с телефона стирает всё, что приложение там хранило:
-      записи, заметки, фотографии, PIN-код и настройки. MyMood исключает эти
-      данные из системной резервной копии Android и из переноса на новый
-      телефон, поэтому после повторной установки или смены телефона они не
-      вернутся.
+      Удаление MyMood с&nbsp;телефона стирает всё, что приложение там хранило: записи, заметки, эмоции, теги, фотографии, PIN-код и&nbsp;настройки, а&nbsp;виджет на главном экране исчезает вместе с&nbsp;приложением. MyMood исключает эти данные из системной резервной копии Android и&nbsp;из переноса на новый телефон, поэтому после повторной установки или смены телефона они не вернутся.
     </p>
 
-    <h2>Шаг 3. Удалите резервную копию в Google Диске</h2>
+    <h2>Шаг 3. Удалите резервную копию в&nbsp;Google Диске</h2>
     <p>
-      Если вы когда-либо включали <b>Резервное копирование на Google Drive</b>,
-      копия ваших записей лежит в вашем собственном Google Диске. Разработчик не
-      видит её и не может удалить за вас, поэтому удалите её сами:
+      Если вы когда-либо включали <b>Резервное копирование на Google Drive</b>, копия ваших записей с&nbsp;эмоциями и&nbsp;тегами лежит в&nbsp;вашем собственном Google Диске. Фотографии в&nbsp;неё никогда не входят. Разработчик не видит её и&nbsp;не может удалить за вас, поэтому удалите её сами:
     </p>
     <ol>
-      <li>
-        Откройте <a href="https://drive.google.com">drive.google.com</a> (или
-        приложение Google Диск) под аккаунтом Google, который использовался для
-        копии.
-      </li>
-      <li>
-        Найдите папку <code>MyMoodApp|Backups</code> (в ней файл
-        <code>mymood-backup.txt</code>) и удалите её.
-      </li>
-      <li>Очистите корзину Диска, иначе копия пролежит там ещё 30 дней.</li>
-      <li>
-        Чтобы отозвать и доступ приложения к аккаунту Google, откройте
-        <a href="https://myaccount.google.com/connections"
-          >myaccount.google.com/connections</a
-        >, выберите MyMood и удалите доступ.
-      </li>
+      <li>Откройте <a href="https://drive.google.com">drive.google.com</a> (или приложение Google Диск) под аккаунтом Google, который использовался для копии.</li>
+      <li>Найдите папку <code>MyMoodApp|Backups</code> (в&nbsp;ней файл <code>mymood-backup.txt</code>) и&nbsp;удалите её.</li>
+      <li>Очистите корзину Диска, иначе копия пролежит там ещё 30&nbsp;дней.</li>
+      <li>Чтобы отозвать и&nbsp;доступ приложения к&nbsp;аккаунту Google, откройте <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>, выберите MyMood и&nbsp;удалите доступ.</li>
     </ol>
-    <p>Кнопка в приложении из шага 2 делает всё это за вас.</p>
+    <p>Кнопка в&nbsp;приложении из шага 2&nbsp;делает всё это за вас.</p>
 
-    <h2>Шаг 4. Попросите нас удалить записи о подписке и аналитике</h2>
+    <h2>Шаг 4. Попросите нас удалить записи о&nbsp;подписке и&nbsp;аналитике</h2>
     <p>
-      Два сервиса хранят сведения об использовании приложения вне вашего
-      телефона: <b>Apphud</b>, который управляет подписками (история покупок,
-      сведения об устройстве, случайный идентификатор Apphud), и
-      <b>Google Analytics для Firebase</b> (события использования и случайные
-      идентификаторы приложения). Учётных записей в приложении нет, поэтому эти
-      данные не связаны с вашим именем или почтой. Чтобы найти ваши, нам нужен
-      номер заказа подписки.
+      Два сервиса хранят сведения об использовании приложения вне вашего телефона: <b>Apphud</b>, который управляет подписками (история покупок, сведения об устройстве, случайный идентификатор Apphud), и&nbsp;<b>Google Analytics для Firebase</b> (события использования и&nbsp;случайные идентификаторы приложения; их же использует связанный с&nbsp;ним наш аккаунт Google Ads, чтобы измерять рекламные кампании). Учётных записей в&nbsp;приложении нет, поэтому эти данные не связаны с&nbsp;вашим именем или почтой. Чтобы найти ваши, нам нужен номер заказа подписки.
     </p>
     <ol>
-      <li>
-        Напишите на <a href="mailto:applarik@gmail.com">applarik@gmail.com</a> с
-        темой <b>MyMood data deletion</b>.
-      </li>
-      <li>
-        Если вы оформляли подписку или пробный период, укажите
-        <b>номер заказа Google Play</b>. Он начинается с <code>GPA.</code> и
-        есть в письме-чеке от Google Play или в приложении Google Play: фото
-        профиля &rarr; <b>Платежи и подписки &rarr; Бюджет и история</b>. Это
-        единственный идентификатор, который остаётся у вас после удаления
-        приложения.
-      </li>
-      <li>
-        Если подписки не было, просто отправьте письмо: мы удалим всё, что
-        сможем сопоставить, и сообщим, что именно.
-      </li>
+      <li>Напишите на <a href="mailto:applarik@gmail.com">applarik@gmail.com</a> с&nbsp;темой <b>MyMood data deletion</b>.</li>
+      <li>Если вы оформляли подписку или пробный период, укажите <b>номер заказа Google Play</b>. Он начинается с&nbsp;<code>GPA.</code> и&nbsp;есть в&nbsp;письме-чеке от Google Play или в&nbsp;приложении Google Play: фото профиля &rarr; <b>Платежи и&nbsp;подписки &rarr; Бюджет и&nbsp;история</b>. Это единственный идентификатор, который остаётся у&nbsp;вас после удаления приложения.</li>
+      <li>Если подписки не было, просто отправьте письмо: мы удалим всё, что сможем сопоставить, и&nbsp;сообщим, что именно.</li>
     </ol>
     <p>
-      <b>Сроки:</b> мы отвечаем в течение 7 рабочих дней и завершаем удаление в
-      течение 30 дней, включая запрос на удаление, который мы передаём в Apphud.
-      Когда всё готово, мы подтверждаем это письмом.
+      <b>Сроки:</b> мы отвечаем в&nbsp;течение 7&nbsp;рабочих дней и&nbsp;завершаем удаление в&nbsp;течение 30&nbsp;дней, включая запрос на удаление, который мы передаём в&nbsp;Apphud. Когда всё готово, мы подтверждаем это письмом.
     </p>
 
     <div class="card">
-      <h3>Что сохраняется и как долго</h3>
+      <h3>Что сохраняется и&nbsp;как долго</h3>
       <ul>
-        <li>
-          <b>Записи о заказах Google Play</b> хранит Google как продавец, по
-          своей политике конфиденциальности. Разработчик удалить их не может.
-        </li>
-        <li>
-          <b>Отчёты о сбоях</b> (Firebase Crashlytics) удаляются автоматически
-          через 90 дней.
-        </li>
-        <li>
-          Данные пользователей и событий <b>Google Analytics</b> удаляются
-          автоматически в течение примерно 15 месяцев после того, как вы в
-          последний раз открывали приложение (срок хранения 14 месяцев плюс
-          ежемесячная очистка Google).
-        </li>
-        <li>
-          <b>Рекламные данные</b> Google AdMob хранит по правилам хранения
-          Google. Рекламный идентификатор можно сбросить или удалить в
-          настройках телефона.
-        </li>
+        <li><b>Записи о&nbsp;заказах Google Play</b> хранит Google как продавец, по своей политике конфиденциальности. Разработчик удалить их не может.</li>
+        <li><b>Отчёты о&nbsp;сбоях</b> (Firebase Crashlytics) удаляются автоматически через 90&nbsp;дней.</li>
+        <li>Данные пользователей и&nbsp;событий <b>Google Analytics</b> удаляются автоматически в&nbsp;течение примерно 15&nbsp;месяцев после того, как вы в&nbsp;последний раз открывали приложение (срок хранения 14&nbsp;месяцев плюс ежемесячная очистка Google).</li>
+        <li>Данные <b>измерения рекламных кампаний</b> в&nbsp;Google Ads хранятся по правилам хранения Google. Измерение рекламы можно выключить в&nbsp;приложении (Настройки &rarr; Измерение и&nbsp;персонализация рекламы), а&nbsp;рекламный идентификатор&nbsp;— сбросить или удалить в&nbsp;настройках телефона.</li>
+        <!-- OLDER-VERSIONS:BEGIN (marked paragraph, V27-REL-006 Values; shortened at PLAN step 7.10) -->
+        <li class="legacy"><b>Только версии 1.3.0&nbsp;и&nbsp;старше:</b> эти версии показывают рекламу Google AdMob, и&nbsp;собранные рекламные данные Google AdMob хранит по правилам хранения Google. Рекламный идентификатор можно сбросить или удалить в&nbsp;настройках телефона. В&nbsp;версии 1.4.0&nbsp;и&nbsp;новее рекламных библиотек нет (<a href="privacy-policy.html#older-versions-ru">Политика конфиденциальности, раздел 15</a>).</li>
+        <!-- OLDER-VERSIONS:END -->
       </ul>
       <p>
-        Подробнее:
-        <a href="privacy-policy.html#ru">Политика конфиденциальности</a>,
-        разделы 9 и 10.
+        Подробнее: <a href="privacy-policy.html#ru">Политика конфиденциальности</a>, разделы 9&nbsp;и&nbsp;10.
       </p>
     </div>
     </div>

@@ -80,28 +80,38 @@
         border-top: 1px solid #ecf0f1;
         padding-top: 15px;
       }
+      .legacy {
+        background: #fff8e6;
+        border-left: 4px solid #e0a800;
+        padding: 4px 20px 8px;
+        margin: 28px 0;
+        border-radius: 4px;
+      }
     </style>
   </head>
   <body>
     <h1>MyMood — Privacy Policy</h1>
     <p>
-      <b>Last updated:</b> 24 September 2026 · <b>App:</b> “My Mood simple
+      <b>Last updated:</b> 10 October 2026 · <b>App:</b> “My Mood simple
       Tracker &amp; Diary” on Google Play (<code>com.klapp.mymood</code>) ·
       <b>Developer:</b> KLapp
     </p>
     <p class="lang-switch"><a href="#ru">Русская версия ниже ↓</a></p>
 
     <div class="card">
-      <b>The short version.</b> Your mood entries and notes stay on your phone.
-      MyMood has no server and no user accounts. If you turn on the optional
-      Google Drive backup, your entries are copied to a folder in your own
-      Google Drive, which the developer cannot see. The app shows ads from
-      Google AdMob to users without a subscription, uses Google Firebase for
-      analytics and crash reports, and uses Apphud to manage subscriptions.
-      These services receive technical and usage data, such as device
-      identifiers and an approximate location based on your IP address. They
-      never receive your mood entries, notes or photos. We never sell your data,
-      and we never share or sell health information.
+      <b>The short version.</b> Your mood entries, notes, emotions, tags and
+      photos stay on your phone. MyMood has no server and no user accounts. If
+      you turn on the optional Google Drive backup, your entries are copied to a
+      folder in your own Google Drive, which the developer cannot see. The app
+      uses Google Firebase for analytics and crash reports, measures our app ad
+      campaigns with Google Analytics and Google Ads, and uses Apphud to manage
+      subscriptions. These services receive technical and usage data, such as
+      device identifiers and an approximate location based on your IP address.
+      They never receive your entries, notes or photos. You can switch ads
+      measurement off at any time in Settings (section 7). We do not sell your
+      data for money, and we never share or sell health information.
+      Version 1.4.0 and later contain no ads software; versions 1.3.0
+      and earlier still show ads (section 15).
     </div>
 
     <h2>1. Who is responsible</h2>
@@ -138,9 +148,17 @@
       </tr>
       <tr>
         <td>
-          <b>Mood entries</b>: mood rating, date and time, note text. Mood
-          ratings are health information.
+          <b>Mood entries</b>: mood rating, date and time, note text, and the
+          emotions and activity tags you pick. Mood ratings and emotions are
+          health information.
         </td>
+        <td>
+          On your phone. If you turn on the backup, also in your own Google
+          Drive (section 6).
+        </td>
+      </tr>
+      <tr>
+        <td><b>Your list of activities and tags</b>, including tags and groups you create</td>
         <td>
           On your phone. If you turn on the backup, also in your own Google
           Drive (section 6).
@@ -159,19 +177,33 @@
         <td>
           On your phone, stored as a salted hash, not as the digits. The PIN
           hides the diary from other people using your phone; it does not
-          encrypt the data.
+          encrypt the data. If you forget the PIN, the app can ask your phone's
+          own screen lock check (fingerprint, face, PIN, pattern or password);
+          the app learns only whether the check passed.
         </td>
       </tr>
       <tr>
-        <td><b>Settings</b>: reminder time, language, nickname</td>
+        <td><b>Home-screen widget</b> (subscription feature)</td>
+        <td>
+          On your phone. The widget keeps only today's mood rating, never a
+          note, emotion or tag. With the PIN lock on, it shows no diary content.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Settings and app state</b>: reminder time, language, nickname,
+          your ads measurement choice and when you accepted the terms
+          (section 7), and your Premium status
+        </td>
         <td>On your phone.</td>
       </tr>
     </table>
     <p>
-      Your entries, notes and photos are never included in advertising requests,
-      analytics events or crash reports. MyMood also keeps them out of Android's
-      own device backup and phone-to-phone transfer, so the only copy outside
-      your phone is the optional Google Drive backup (section 6).
+      Your entries, notes, emotions, tags and photos are never included in
+      analytics events or crash reports. MyMood also keeps them out of
+      Android's own device backup and phone-to-phone transfer, so the only copy
+      outside your phone is the optional Google Drive backup (section 6).
+      Reminders are scheduled on your phone; no server sends them.
     </p>
 
     <h3>4.2. Data that third-party services receive</h3>
@@ -187,8 +219,8 @@
           or region, never your precise location; the app has no location
           permission)
         </td>
-        <td>Google AdMob, Google Analytics for Firebase, Apphud</td>
-        <td>Ads, analytics, subscription management, fraud prevention</td>
+        <td>Google Analytics for Firebase (and, through it, Google Ads), Apphud</td>
+        <td>Analytics, measuring our ad campaigns, subscription management, fraud prevention</td>
       </tr>
       <tr>
         <td>
@@ -197,20 +229,23 @@
           Crashlytics installation ID, Apphud user ID and device ID
         </td>
         <td>
-          Google AdMob, Firebase (Analytics, Crashlytics, Remote Config), Apphud
+          Firebase (Analytics, Crashlytics, Remote Config), Google Ads through
+          Analytics, Apphud
         </td>
         <td>
-          Ads, analytics, crash reports, delivering app settings, subscription
-          management
+          Analytics, measuring our ad campaigns, crash reports, delivering app
+          settings, subscription management
         </td>
       </tr>
       <tr>
         <td>
-          <b>App interactions</b>: screens opened, taps on ads, events such as
-          “entry saved” or “subscription screen shown” (never what you wrote)
+          <b>App interactions</b>: screens opened, which onboarding and
+          subscription screens you saw, events such as “entry saved” or
+          “subscription screen shown” (never what you wrote or picked in an
+          entry, and never your onboarding answers)
         </td>
-        <td>Google Analytics for Firebase, Google AdMob</td>
-        <td>Analytics, measuring our ad campaigns, ads</td>
+        <td>Google Analytics for Firebase (and, through it, Google Ads)</td>
+        <td>Analytics, measuring our ad campaigns</td>
       </tr>
       <tr>
         <td>
@@ -225,16 +260,16 @@
       </tr>
       <tr>
         <td><b>Crash logs and diagnostics</b></td>
-        <td>Firebase Crashlytics, Google AdMob</td>
-        <td>Finding and fixing crashes, ad fraud prevention</td>
+        <td>Firebase Crashlytics</td>
+        <td>Finding and fixing crashes</td>
       </tr>
       <tr>
         <td>
           <b>Device information</b>: device model, Android version, app version,
           language, time zone, country
         </td>
-        <td>Apphud, Firebase, Google AdMob</td>
-        <td>Making the app and ads work on your device, analytics</td>
+        <td>Apphud, Firebase</td>
+        <td>Making the app work on your device, analytics</td>
       </tr>
     </table>
     <p>
@@ -258,48 +293,41 @@
         phone's manufacturer and Android version, the app's current and first
         version and its install date, an Apphud user ID and device ID (random
         IDs created on your phone), the Google Analytics app instance ID, which
-        subscription screens were shown, and purchase data from the app and
-        from Google Play's server notifications. The app switches off Apphud's
-        device tracking: Apphud does not receive your Android ID, advertising
-        ID, app set ID or device model, and Apphud states that it then does not
-        collect your IP address. Nothing Apphud receives identifies the phone
-        itself, so after a reinstall the app starts as a new Apphud user. A
-        subscription you bought still comes back through Google Play when you
-        restore purchases. Apphud stores data in the EU and the US.
+        onboarding and subscription screens were shown, and purchase data from
+        the app and from Google Play's server notifications. The app switches
+        off Apphud's device tracking: Apphud does not receive your Android ID,
+        advertising ID, app set ID or device model, and Apphud states that it
+        then does not collect your IP address. Nothing Apphud receives
+        identifies the phone itself, so after a reinstall the app starts as a
+        new Apphud user. A subscription you bought still comes back through
+        Google Play when you restore purchases. Apphud may pass trial and
+        purchase events to Google Analytics, linked by the app instance ID, so
+        that we can measure our ad campaigns (section 7). Apphud stores data in
+        the EU and the US.
         <a href="https://docs.apphud.com/docs/user-data"
           >What Apphud collects</a
         >
         · <a href="https://legal.apphud.com/privacy">Apphud privacy policy</a>.
       </li>
       <li>
-        <b>Google AdMob</b> (Google) shows ads to users without a subscription.
-        AdMob collects <b>and shares</b> data for advertising, analytics and
-        fraud prevention: your IP address (used to estimate your general
-        location), ad interactions, diagnostic information, the advertising ID,
-        the app set ID and other device identifiers. Google uses this data under
-        its own privacy policy, so for advertising Google is not only our
-        processor.
-        <a
-          href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
-          >AdMob data disclosure</a
-        >
-        ·
-        <a href="https://policies.google.com/technologies/partner-sites"
-          >How Google uses data from apps that use its services</a
-        >.
-      </li>
-      <li>
         <b>Google Analytics for Firebase</b> (Google) counts how the app is
         used: screens, events, sessions, the app instance ID, the Apphud user ID
         (as the Analytics user ID, so that subscription events and app events
-        can be counted together), the advertising ID (in the EEA, the UK and
-        Switzerland only if you agree; elsewhere by default, see section 7),
-        an approximate location derived from your IP
-        address (Google shortens the IP address first), and automatic in-app
-        purchase events with the product, price and currency. Our Analytics
-        property is linked to Google Ads so that we can measure our app
-        advertising campaigns; for that purpose Google also uses these events.
-        We never send your entries, notes or mood ratings to Analytics.
+        can be counted together), the advertising ID (unless you switch ads
+        measurement off, section 7), an approximate location derived from your
+        IP address (Google shortens the IP address first), and automatic in-app
+        purchase events with the product, price and currency. We never send
+        your entries, notes, mood ratings, emotions or tags to Analytics.
+      </li>
+      <li>
+        <b>Google Ads</b> (Google) runs our app ad campaigns. Our Analytics
+        property is linked to Google Ads, so Google Ads uses the Analytics
+        events and identifiers above to measure which ads led to installs,
+        trials and purchases and to show our ads to people who may want the
+        app. Google uses this data under its own policies:
+        <a href="https://business.safety.google/privacy/"
+          >How Google uses data from apps that use its services</a
+        >.
       </li>
       <li>
         <b>Firebase Crashlytics</b> (Google) receives crash reports: stack
@@ -308,13 +336,15 @@
       </li>
       <li>
         <b>Firebase Remote Config</b> (Google) delivers app settings, such as
-        which subscription screen to show. It uses the Firebase installation ID
-        together with your country, language, time zone and Android version.
+        which onboarding and subscription screen to show when we compare
+        versions of them. It uses the Firebase installation ID together with
+        your country, language, time zone and Android version.
       </li>
       <li>
         <b>Google Play</b> sells the subscription as the merchant. Google
         handles your payment details, and keeps its own order records under
-        Google's privacy policy.
+        Google's privacy policy. If you choose to rate MyMood from the app,
+        Google Play handles the rating; the app does not see it.
       </li>
       <li>
         <b>Google Sign-In and the Google Drive API</b> (Google) are used only
@@ -333,7 +363,7 @@
       <li>
         The backup is a subscription feature and is off until you turn it on in
         <b>Settings &rarr; Backup to Google Drive</b>. You then choose a Google
-        account.
+        account. You can also save a copy at once with <b>Back up now</b>.
       </li>
       <li>
         The app asks only for access to the files it creates itself
@@ -343,8 +373,9 @@
         While the backup is on, the app keeps one file,
         <code>mymood-backup.txt</code>, up to date in a folder named
         <code>MyMoodApp|Backups</code> in your Drive. The file holds your mood
-        entries (mood rating, date, time and note text). Photos are not
-        included.
+        entries (mood rating, date, time and note text, with the emotions and
+        activity tags you picked) and your list of activities and tags. Photos
+        are not included.
       </li>
       <li>
         The file lives in your own Google Drive, where you can see, download or
@@ -352,56 +383,78 @@
         stores it under Google's own terms and privacy policy.
       </li>
       <li>
-        Turning the backup off stops new uploads. To remove the copy, delete the
-        <code>MyMoodApp|Backups</code> folder in Google Drive (see section 10).
+        Restoring from Drive adds the entries in the backup to the diary on
+        your phone; if the same entry is in both, the version edited last is
+        kept.
+      </li>
+      <li>
+        Turning the backup off, or the end of your subscription, stops new
+        uploads; the copy already in your Drive stays there. To remove it,
+        delete the <code>MyMoodApp|Backups</code> folder in Google Drive (see
+        section 10).
       </li>
     </ul>
 
-    <h2>7. Consent and privacy options</h2>
+    <h2>7. Consent and your choice about ads measurement</h2>
+    <p>
+      On the first screen of MyMood, the line under the “Next” button says
+      that by tapping “Next” you accept our Terms of Use and this Privacy
+      Policy, including ads measurement and personalization (Google, Apphud).
+      Tapping “Next” is your consent. It works the same way in every country.
+    </p>
+    <p>
+      With that consent, the app tells Google Analytics that analytics
+      storage, ad storage, sending ad data to Google and ad personalization are
+      allowed. Google Analytics and Google Ads then use the app's events, the
+      app instance ID, the advertising ID and an approximate location derived
+      from your IP address to measure our app ad campaigns (which ads led to
+      installs, trials and purchases) and to show our ads to people who may
+      want the app. Apphud may pass trial and purchase events to Google
+      Analytics for the same measurement. Your entries, notes, emotions, tags
+      and photos are never part of this. How Google uses data from apps that
+      use its services:
+      <a href="https://business.safety.google/privacy/"
+        >business.safety.google/privacy</a
+      >.
+    </p>
+    <p>
+      <b>To withdraw or change your choice,</b> turn off
+      <b>Settings &rarr; Ads measurement and personalization</b>. The app then
+      tells Google that ad storage, sending ad data to Google and ad
+      personalization are no longer allowed; counting how the app is used
+      (analytics storage) goes on. The switch is free, works in every country,
+      changes nothing else in the app, and you can turn it on again at any
+      time. In US states with privacy laws, this switch is also how you opt out
+      of the “sale” or “sharing” of your personal data and of targeted
+      advertising.
+    </p>
     <p>
       In the European Economic Area, the United Kingdom and Switzerland, the
-      app shows Google's consent form (Google User Messaging Platform) when it
-      starts, until you have answered it, and does not personalize ads before
-      that. Your choice is passed to Google AdMob and Google Analytics through
-      Google's consent mode, and they adjust what they store and use: without
-      your consent, Analytics does not use the advertising ID and the ads you
-      see are not personalized.
-    </p>
-    <p>
-      Everywhere else, the app does not ask first. It tells Google Analytics
-      that analytics storage, ad storage, sending ad data to Google and ad
-      personalization are allowed. So Analytics collects the advertising ID and
-      uses it, with the app's events, to measure our ad campaigns, and AdMob
-      can show personalized ads. In US states with privacy laws, Google may
-      show a notice that lets you opt out of the sale or sharing of your data
-      and of targeted advertising; if you opt out, the app also turns ad
-      personalization off in Analytics. If the app cannot reach Google's
-      consent service when it starts, the settings of its last successful start
-      stay in force; before the first one, analytics storage and ad storage are
-      off.
-    </p>
-    <p>
-      Where Google's form or notice applies, the app shows
-      <b>Settings &rarr; Privacy options</b>. There you can change or withdraw
-      your choice at any time (in the EEA, the UK and Switzerland) or opt out
-      (in US states with privacy laws). The entry appears only when Google's
-      consent service says your region needs it.
+      app may instead ask on a separate screen before you start, where you can
+      accept or decline. Your answer there sets the same signals, and you can
+      change it later with the same switch.
     </p>
     <p>
       On any Android phone you can also reset or delete your advertising ID in
       the phone's settings (Settings &rarr; Google &rarr; Ads, or Settings
       &rarr; Privacy &rarr; Ads, depending on the phone). Once it is deleted,
-      apps, including AdMob and Analytics in MyMood, can no longer use it.
+      apps, including Google Analytics in MyMood, can no longer use it.
     </p>
 
     <h2>8. Subscription</h2>
     <p>
-      MyMood works without a subscription: mood entries with notes, the
-      calendar, the diary list, daily reminders, deleting your data and, where
-      Google's form or notice applies, the privacy options (section 7) are available
-      to everyone. A weekly subscription through Google
-      Play adds photos in entries, statistics, Google Drive backup and import,
-      the PIN lock and removes ads.
+      Without a subscription, MyMood keeps these free for everyone: one mood
+      entry a day with a note, the calendar and the diary list, the daily
+      reminder and the reminders after a break, the Insights tab with an
+      example of each report, the language and other settings, the ads
+      measurement switch (section 7), “Redeem access code” and deleting your
+      data. A weekly subscription through Google Play, MyMood Premium, adds
+      several entries a day and entries for past days, emotions and activity
+      tags, the home-screen widget, statistics, weekly and monthly reports and
+      Activities &amp; mood in Insights, photos in entries, Google Drive backup
+      and import, and the PIN lock. If Premium ends, everything you saved stays
+      visible, and you can still change the mood and note of any entry or
+      delete it.
     </p>
     <ul>
       <li>
@@ -434,7 +487,7 @@
         <th>How long</th>
       </tr>
       <tr>
-        <td>Entries, notes, photos, PIN and settings on your phone</td>
+        <td>Entries, notes, emotions, tags, photos, PIN, widget data and settings on your phone</td>
         <td>
           Until you delete them, use “Delete account &amp; all data” in the app,
           or uninstall the app.
@@ -479,11 +532,9 @@
         </td>
       </tr>
       <tr>
-        <td>Google AdMob</td>
+        <td>Google Ads</td>
         <td>
-          Governed by Google's own retention rules. For example, Google
-          anonymizes advertising data in server logs by removing part of the IP
-          address after 9 months and cookie information after 18 months (<a
+          Governed by Google's own retention rules (<a
             href="https://policies.google.com/technologies/retention"
             >How Google retains data</a
           >).
@@ -513,9 +564,11 @@
     <ul>
       <li>
         <b>In the app, free for everyone:</b> Settings &rarr; “Delete account
-        &amp; all data”. This erases everything on your phone, deletes the
-        backup file and folder from your Google Drive, and removes the app's
-        access to your Google account.
+        &amp; all data”. This erases everything on your phone (entries with
+        their emotions and tags, your list of activities and tags, photos, the
+        PIN, your ads measurement choice and all settings), clears the
+        home-screen widget, deletes the backup file and folder from your Google
+        Drive, and removes the app's access to your Google account.
       </li>
       <li>
         <b>Backup in Google Drive, by yourself:</b> open Google Drive, find the
@@ -552,10 +605,13 @@
       Depending on where you live (for example, under the GDPR in the EU and UK
       or under California law), you can ask to access, correct or delete your
       personal data, object to or restrict its use, and withdraw consent at any
-      time (Settings &rarr; Privacy options, section 7). Email
+      time (Settings &rarr; Ads measurement and personalization, section 7). In
+      US states with privacy laws, the same switch opts you out of the “sale”
+      or “sharing” of your data for targeted advertising. Email
       <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>. You also have
       the right to complain to your local data protection authority. We do not
-      sell personal data and do not use your entries for advertising.
+      sell personal data for money and do not use your entries for
+      advertising.
     </p>
 
     <h2>12. Data transfers</h2>
@@ -579,104 +635,126 @@
       a new “Last updated” date.
     </p>
 
-    <h2>15. Contact</h2>
+    <!-- OLDER-VERSIONS:BEGIN (marked paragraph, V27-REL-006 Values; shortened at PLAN step 7.10) -->
+    <section class="legacy" id="older-versions">
+      <h2>15. Versions 1.3.0 and earlier: ads and Google's consent form</h2>
+      <p>
+        <i>This marked section covers only versions 1.3.0 and earlier of
+        MyMood, which some phones still run. None of it applies to version
+        1.4.0 and later.</i>
+      </p>
+      <p>
+        Versions 1.3.0 and earlier show ads from <b>Google AdMob</b> (Google)
+        to users without a subscription. AdMob collects <b>and shares</b> data
+        for advertising, analytics and fraud prevention: your IP address (used
+        to estimate your general location), ad interactions, diagnostic
+        information, the advertising ID, the app set ID and other device
+        identifiers. Google uses this data under its own privacy policy, so for
+        advertising Google is not only our processor (<a
+          href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
+          >AdMob data disclosure</a
+        >). Google keeps advertising data under its own retention rules; for
+        example, it anonymizes advertising data in server logs by removing part
+        of the IP address after 9 months and cookie information after 18 months
+        (<a href="https://policies.google.com/technologies/retention"
+          >How Google retains data</a
+        >).
+      </p>
+      <p>
+        In the European Economic Area, the United Kingdom and Switzerland, those
+        versions show Google's consent form (Google User Messaging Platform)
+        when the app starts, until you answer it, and do not personalize ads
+        before that; your choice goes to AdMob and Google Analytics through
+        Google's consent mode. Elsewhere they do not ask first and allow
+        analytics storage, ad storage, sending ad data to Google and ad
+        personalization; in US states with privacy laws, Google may show a
+        notice that lets you opt out of the sale or sharing of your data and of
+        targeted advertising. Where Google's form or notice applies, those
+        versions show <b>Settings &rarr; Privacy options</b>, where you can
+        change or withdraw your choice or opt out. If the app cannot reach
+        Google's consent service when it starts, the settings of its last
+        successful start stay in force; before the first one, analytics storage
+        and ad storage are off.
+      </p>
+      <p>
+        In those versions, mood entries with notes are free with no daily
+        limit, and the subscription adds photos, statistics, Google Drive backup
+        and import and the PIN lock, and removes the ads.
+      </p>
+      <p>
+        Updating to version 1.4.0 removes AdMob and Google's consent form from
+        the app. Answers given in Google's form are not carried over: version
+        1.4.0 starts with ads measurement on, as section 7 describes, and you
+        can turn it off in Settings.
+      </p>
+    </section>
+    <!-- OLDER-VERSIONS:END -->
+
+    <h2>16. Contact</h2>
     <p>KLapp, <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.</p>
 
     <hr />
 
     <div lang="ru">
-    <h1 id="ru">MyMood — Политика конфиденциальности</h1>
+    <h1 id="ru">MyMood&nbsp;— Политика конфиденциальности</h1>
     <p>
-      <b>Обновлено:</b> 24 сентября 2026 г. · <b>Приложение:</b> «My Mood simple
-      Tracker &amp; Diary» в Google Play (<code>com.klapp.mymood</code>) ·
-      <b>Разработчик:</b> KLapp
+      <b>Обновлено:</b> 9&nbsp;октября 2026&nbsp;г. · <b>Приложение:</b> «My Mood simple Tracker &amp; Diary» в&nbsp;Google Play (<code>com.klapp.mymood</code>) · <b>Разработчик:</b> KLapp
     </p>
 
     <div class="card">
-      <b>Коротко.</b> Записи о настроении и заметки хранятся на вашем телефоне.
-      У MyMood нет сервера и нет учётных записей пользователей. Если вы включите
-      резервное копирование в Google Диск, записи копируются в папку в вашем
-      собственном Google Диске, которую разработчик не видит. Пользователям без
-      подписки приложение показывает рекламу Google AdMob, использует Google
-      Firebase для аналитики и отчётов о сбоях, а Apphud — для управления
-      подписками. Эти сервисы получают технические данные и данные об
-      использовании: идентификаторы устройства и приблизительное местоположение,
-      определённое по IP-адресу. Записи, заметки и фотографии они не получают
-      никогда. Мы не продаём ваши данные и никогда не передаём и не продаём
-      сведения о здоровье.
+      <b>Коротко.</b> Записи о&nbsp;настроении, заметки, эмоции, теги и&nbsp;фотографии хранятся на вашем телефоне. У&nbsp;MyMood нет сервера и&nbsp;нет учётных записей пользователей. Если вы включите резервное копирование в&nbsp;Google Диск, записи копируются в&nbsp;папку в&nbsp;вашем собственном Google Диске, которую разработчик не видит. Приложение использует Google Firebase для аналитики и&nbsp;отчётов о&nbsp;сбоях, измеряет наши рекламные кампании с&nbsp;помощью Google Analytics и&nbsp;Google Ads, а&nbsp;Apphud&nbsp;— для управления подписками. Эти сервисы получают технические данные и&nbsp;данные об использовании: идентификаторы устройства и&nbsp;приблизительное местоположение, определённое по IP-адресу. Записи, заметки и&nbsp;фотографии они не получают никогда. Измерение рекламы можно выключить в&nbsp;любой момент в&nbsp;настройках (раздел 7). Мы не продаём ваши данные за деньги и&nbsp;никогда не передаём и&nbsp;не продаём сведения о&nbsp;здоровье. В&nbsp;версии 1.4.0&nbsp;и&nbsp;новее нет рекламных библиотек; версии 1.3.0&nbsp;и&nbsp;старше пока показывают рекламу (раздел 15).
     </div>
 
     <h2>1. Кто отвечает за данные</h2>
     <p>
-      MyMood разрабатывает и публикует в Google Play независимый разработчик
-      KLapp. KLapp определяет, как используются описанные здесь данные
-      («контролёр данных»). Связь:
-      <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.
+      MyMood разрабатывает и&nbsp;публикует в&nbsp;Google Play независимый разработчик KLapp. KLapp определяет, как используются описанные здесь данные («контролёр данных»). Связь: <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.
     </p>
 
-    <h2>2. MyMood — не медицинское приложение</h2>
+    <h2>2. MyMood&nbsp;— не медицинское приложение</h2>
     <p>
-      Приложение MyMood — не медицинское изделие. Оно не предназначено для
-      диагностики, лечения, излечения или профилактики каких-либо заболеваний.
-      Если вас беспокоит ваше психическое здоровье, обратитесь к врачу или
-      другому медицинскому специалисту.
+      Приложение MyMood&nbsp;— не медицинское изделие. Оно не предназначено для диагностики, лечения, излечения или профилактики каких-либо заболеваний. Если вас беспокоит ваше психическое здоровье, обратитесь к&nbsp;врачу или другому медицинскому специалисту.
     </p>
 
     <h2>3. Без учётной записи</h2>
     <p>
-      Чтобы пользоваться MyMood, не нужно регистрироваться или входить в
-      аккаунт. Собственной учётной записи у приложения нет, и разработчик не
-      держит сервер с вашими данными. Вход через Google нужен только для того,
-      чтобы дать приложению доступ к вашему Google Диску для резервной копии
-      (раздел 6). Ваше имя и адрес почты Google остаются между телефоном и
-      Google; разработчик их не получает.
+      Чтобы пользоваться MyMood, не нужно регистрироваться или входить в&nbsp;аккаунт. Собственной учётной записи у&nbsp;приложения нет, и&nbsp;разработчик не держит сервер с&nbsp;вашими данными. Вход через Google нужен только для того, чтобы дать приложению доступ к&nbsp;вашему Google Диску для резервной копии (раздел 6). Ваше имя и&nbsp;адрес почты Google остаются между телефоном и&nbsp;Google; разработчик их не получает.
     </p>
 
     <h2>4. Какие данные обрабатываются</h2>
 
-    <h3>4.1. Данные, которые остаются у вас</h3>
+    <h3>4.1. Данные, которые остаются у&nbsp;вас</h3>
     <table>
       <tr>
         <th>Данные</th>
         <th>Где хранятся</th>
       </tr>
       <tr>
-        <td>
-          <b>Записи о настроении</b>: оценка настроения, дата и время, текст
-          заметки. Оценки настроения относятся к сведениям о здоровье.
-        </td>
-        <td>
-          На телефоне. Если включено резервное копирование — ещё и в вашем
-          Google Диске (раздел 6).
-        </td>
+        <td><b>Записи о&nbsp;настроении</b>: оценка настроения, дата и&nbsp;время, текст заметки, а&nbsp;также выбранные эмоции и&nbsp;теги занятий. Оценки настроения и&nbsp;эмоции относятся к&nbsp;сведениям о&nbsp;здоровье.</td>
+        <td>На телефоне. Если включено резервное копирование, ещё и&nbsp;в&nbsp;вашем Google Диске (раздел 6).</td>
       </tr>
       <tr>
-        <td><b>Фотографии</b>, прикреплённые к записям</td>
-        <td>
-          Только на телефоне. В резервную копию фотографии не входят. Приложение
-          получает только снимок, выбранный вами в системном выборе фото или
-          сделанный вашим приложением камеры.
-        </td>
+        <td><b>Ваш список занятий и&nbsp;тегов</b>, включая созданные вами теги и&nbsp;группы</td>
+        <td>На телефоне. Если включено резервное копирование, ещё и&nbsp;в&nbsp;вашем Google Диске (раздел 6).</td>
+      </tr>
+      <tr>
+        <td><b>Фотографии</b>, прикреплённые к&nbsp;записям</td>
+        <td>Только на телефоне. В&nbsp;резервную копию фотографии не входят. Приложение получает только снимок, выбранный вами в&nbsp;системном выборе фото или сделанный вашим приложением камеры.</td>
       </tr>
       <tr>
         <td><b>PIN-код</b> (функция подписки)</td>
-        <td>
-          На телефоне, в виде хеша с солью, а не самих цифр. PIN-код скрывает
-          дневник от других людей, которые берут ваш телефон, но не шифрует
-          данные.
-        </td>
+        <td>На телефоне, в&nbsp;виде хеша с&nbsp;солью, а&nbsp;не самих цифр. PIN-код скрывает дневник от других людей, которые берут ваш телефон, но не шифрует данные. Если вы забыли PIN-код, приложение может запросить проверку блокировки экрана телефона (отпечаток, лицо, PIN-код, графический ключ или пароль); приложение узнаёт только, пройдена ли проверка.</td>
       </tr>
       <tr>
-        <td><b>Настройки</b>: время напоминания, язык, никнейм</td>
+        <td><b>Виджет на главном экране</b> (функция подписки)</td>
+        <td>На телефоне. Виджет хранит только сегодняшнюю оценку настроения, без заметок, эмоций и&nbsp;тегов. Если включён PIN-код, виджет не показывает ничего из дневника.</td>
+      </tr>
+      <tr>
+        <td><b>Настройки и&nbsp;состояние приложения</b>: время напоминания, язык, никнейм, ваш выбор насчёт измерения рекламы и&nbsp;время, когда вы приняли условия (раздел 7), статус Премиума</td>
         <td>На телефоне.</td>
       </tr>
     </table>
     <p>
-      Записи, заметки и фотографии никогда не попадают в рекламные запросы,
-      события аналитики и отчёты о сбоях. MyMood также исключает их из
-      системной резервной копии Android и из переноса данных на новый телефон,
-      поэтому единственная копия вне телефона — необязательная резервная копия
-      в Google Диске (раздел 6).
+      Записи, заметки, эмоции, теги и&nbsp;фотографии никогда не попадают в&nbsp;события аналитики и&nbsp;отчёты о&nbsp;сбоях. MyMood также исключает их из системной резервной копии Android и&nbsp;из переноса данных на новый телефон, поэтому единственная копия вне телефона&nbsp;— необязательная резервная копия в&nbsp;Google Диске (раздел 6). Напоминания планируются на самом телефоне, никакой сервер их не присылает.
     </p>
 
     <h3>4.2. Данные, которые получают сторонние сервисы</h3>
@@ -687,268 +765,124 @@
         <th>Зачем</th>
       </tr>
       <tr>
-        <td>
-          <b>Приблизительное местоположение</b>, определённое по IP-адресу
-          (страна или регион, но не точное место; разрешения на доступ к
-          геолокации у приложения нет)
-        </td>
-        <td>Google AdMob, Google Analytics для Firebase, Apphud</td>
-        <td>
-          Реклама, аналитика, управление подписками, защита от мошенничества
-        </td>
+        <td><b>Приблизительное местоположение</b>, определённое по IP-адресу (страна или регион, но не точное место; разрешения на доступ к&nbsp;геолокации у&nbsp;приложения нет)</td>
+        <td>Google Analytics для Firebase (а&nbsp;через него Google Ads), Apphud</td>
+        <td>Аналитика, измерение наших рекламных кампаний, управление подписками, защита от мошенничества</td>
       </tr>
       <tr>
-        <td>
-          <b>Идентификаторы устройства и другие идентификаторы</b>: рекламный
-          идентификатор Android, идентификатор набора приложений (app set ID),
-          идентификатор установки Firebase, идентификатор экземпляра
-          приложения Google Analytics, идентификатор установки Crashlytics,
-          идентификаторы пользователя и устройства Apphud
-        </td>
-        <td>
-          Google AdMob, Firebase (Analytics, Crashlytics, Remote Config), Apphud
-        </td>
-        <td>
-          Реклама, аналитика, отчёты о сбоях, доставка настроек приложения,
-          управление подписками
-        </td>
+        <td><b>Идентификаторы устройства и&nbsp;другие идентификаторы</b>: рекламный идентификатор Android, идентификатор набора приложений (app set ID), идентификатор установки Firebase, идентификатор экземпляра приложения Google Analytics, идентификатор установки Crashlytics, идентификаторы пользователя и&nbsp;устройства Apphud</td>
+        <td>Firebase (Analytics, Crashlytics, Remote Config), Google Ads через Analytics, Apphud</td>
+        <td>Аналитика, измерение наших рекламных кампаний, отчёты о&nbsp;сбоях, доставка настроек приложения, управление подписками</td>
       </tr>
       <tr>
-        <td>
-          <b>Действия в приложении</b>: открытые экраны, нажатия на рекламу,
-          события вроде «запись сохранена» или «показан экран подписки» (но
-          никогда не то, что вы написали)
-        </td>
-        <td>Google Analytics для Firebase, Google AdMob</td>
-        <td>Аналитика, измерение наших рекламных кампаний, реклама</td>
+        <td><b>Действия в&nbsp;приложении</b>: открытые экраны, какие экраны знакомства с&nbsp;приложением и&nbsp;подписки вы видели, события вроде «запись сохранена» или «показан экран подписки» (но никогда не то, что вы написали или выбрали в&nbsp;записи, и&nbsp;не ваши ответы при знакомстве с&nbsp;приложением)</td>
+        <td>Google Analytics для Firebase (а&nbsp;через него Google Ads)</td>
+        <td>Аналитика, измерение наших рекламных кампаний</td>
       </tr>
       <tr>
-        <td>
-          <b>История покупок</b>: какая подписка куплена, статус пробного
-          периода и продлений, цена, номер заказа
-        </td>
+        <td><b>История покупок</b>: какая подписка куплена, статус пробного периода и&nbsp;продлений, цена, номер заказа</td>
         <td>Apphud, Google Analytics для Firebase, Google Play</td>
-        <td>
-          Доступ к оплаченным функциям, статистика подписок, измерение наших
-          рекламных кампаний
-        </td>
+        <td>Доступ к&nbsp;оплаченным функциям, статистика подписок, измерение наших рекламных кампаний</td>
       </tr>
       <tr>
-        <td><b>Журналы сбоев и диагностика</b></td>
-        <td>Firebase Crashlytics, Google AdMob</td>
-        <td>Поиск и исправление сбоев, защита рекламы от мошенничества</td>
+        <td><b>Журналы сбоев и&nbsp;диагностика</b></td>
+        <td>Firebase Crashlytics</td>
+        <td>Поиск и&nbsp;исправление сбоев</td>
       </tr>
       <tr>
-        <td>
-          <b>Сведения об устройстве</b>: модель, версия Android, версия
-          приложения, язык, часовой пояс, страна
-        </td>
-        <td>Apphud, Firebase, Google AdMob</td>
-        <td>Работа приложения и рекламы на вашем устройстве, аналитика</td>
+        <td><b>Сведения об устройстве</b>: модель, версия Android, версия приложения, язык, часовой пояс, страна</td>
+        <td>Apphud, Firebase</td>
+        <td>Работа приложения на вашем устройстве, аналитика</td>
       </tr>
     </table>
     <p>
-      Все эти данные передаются по зашифрованным соединениям (HTTPS/TLS). Номера
-      карт и другие платёжные данные обрабатывает Google Play; ни разработчик,
-      ни приложение их не получают.
+      Все эти данные передаются по зашифрованным соединениям (HTTPS/TLS). Номера карт и&nbsp;другие платёжные данные обрабатывает Google Play; ни разработчик, ни приложение их не получают.
     </p>
     <p>
-      Если вы отправляете отзыв из настроек, приложение открывает ваше почтовое
-      приложение с готовым письмом. Мы получаем то, что вы отправили (адрес
-      почты и текст), и используем это только для ответа вам.
+      Если вы отправляете отзыв из настроек, приложение открывает ваше почтовое приложение с&nbsp;готовым письмом. Мы получаем то, что вы отправили (адрес почты и&nbsp;текст), и&nbsp;используем это только для ответа вам.
     </p>
 
     <h2>5. Какими сервисами мы пользуемся</h2>
     <ul>
       <li>
-        <b>Apphud</b> (Apphud Inc.) управляет подписками и даёт нам статистику
-        по ним. Apphud — наш обработчик: он обрабатывает данные только от нашего
-        имени и по нашим инструкциям. Он получает язык и региональные
-        настройки (локаль), часовой пояс и страну, производителя телефона и
-        версию Android, текущую и первую версию приложения и дату установки,
-        идентификаторы пользователя и устройства Apphud (случайные, создаются
-        на телефоне), идентификатор экземпляра приложения Google Analytics,
-        сведения о том, какие экраны подписки были показаны, и данные о покупках
-        из приложения и из серверных уведомлений Google Play. Приложение
-        отключает отслеживание устройства в Apphud: Apphud не получает Android
-        ID, рекламный идентификатор, app set ID и модель устройства, а IP-адрес,
-        по словам Apphud, в этом режиме не собирает. Ничто из того, что получает
-        Apphud, не указывает на сам телефон, поэтому после переустановки
-        приложение становится новым пользователем Apphud. Купленная подписка
-        всё равно возвращается через Google Play, когда вы восстанавливаете
-        покупки. Apphud хранит данные в ЕС и США.
-        <a href="https://docs.apphud.com/docs/user-data"
-          >Какие данные собирает Apphud</a
-        >
-        ·
-        <a href="https://legal.apphud.com/privacy"
-          >Политика конфиденциальности Apphud</a
-        >.
+        <b>Apphud</b> (Apphud Inc.) управляет подписками и&nbsp;даёт нам статистику по ним. Apphud&nbsp;— наш обработчик: он обрабатывает данные только от нашего имени и&nbsp;по нашим инструкциям. Он получает язык и&nbsp;региональные настройки (локаль), часовой пояс и&nbsp;страну, производителя телефона и&nbsp;версию Android, текущую и&nbsp;первую версию приложения и&nbsp;дату установки, идентификаторы пользователя и&nbsp;устройства Apphud (случайные, создаются на телефоне), идентификатор экземпляра приложения Google Analytics, сведения о&nbsp;том, какие экраны знакомства с&nbsp;приложением и&nbsp;подписки были показаны, и&nbsp;данные о&nbsp;покупках из приложения и&nbsp;из серверных уведомлений Google Play. Приложение отключает отслеживание устройства в&nbsp;Apphud: Apphud не получает Android ID, рекламный идентификатор, app set ID и&nbsp;модель устройства, а&nbsp;IP-адрес, по словам Apphud, в&nbsp;этом режиме не собирает. Ничто из того, что получает Apphud, не указывает на сам телефон, поэтому после переустановки приложение становится новым пользователем Apphud. Купленная подписка всё равно возвращается через Google Play, когда вы восстанавливаете покупки. Apphud может передавать события о&nbsp;пробных периодах и&nbsp;покупках в&nbsp;Google Analytics, связывая их по идентификатору экземпляра приложения, чтобы мы могли измерять наши рекламные кампании (раздел 7). Apphud хранит данные в&nbsp;ЕС и&nbsp;США.
+        <a href="https://docs.apphud.com/docs/user-data">Какие данные собирает Apphud</a>
+        · <a href="https://legal.apphud.com/privacy">Политика конфиденциальности Apphud</a>.
       </li>
       <li>
-        <b>Google AdMob</b> (Google) показывает рекламу пользователям без
-        подписки. AdMob собирает <b>и передаёт</b> данные для рекламы, аналитики
-        и защиты от мошенничества: IP-адрес (по нему оценивается общее
-        местоположение), взаимодействие с рекламой, диагностические данные,
-        рекламный идентификатор, app set ID и другие идентификаторы устройства.
-        Google использует эти данные по своей политике конфиденциальности,
-        поэтому в части рекламы Google — не только наш обработчик.
-        <a
-          href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
-          >Раскрытие данных AdMob</a
-        >
-        ·
-        <a href="https://policies.google.com/technologies/partner-sites"
-          >Как Google использует данные из приложений, работающих с его
-          сервисами</a
-        >.
+        <b>Google Analytics для Firebase</b> (Google) показывает, как используется приложение: экраны, события, сеансы, идентификатор экземпляра приложения, идентификатор пользователя Apphud (как идентификатор пользователя Analytics, чтобы события подписки и&nbsp;события приложения считались вместе), рекламный идентификатор (если вы не выключили измерение рекламы, раздел 7), приблизительное местоположение по IP-адресу (Google предварительно укорачивает IP-адрес) и&nbsp;автоматические события покупок с&nbsp;продуктом, ценой и&nbsp;валютой. Записи, заметки, оценки настроения, эмоции и&nbsp;теги в&nbsp;Analytics не отправляются никогда.
       </li>
       <li>
-        <b>Google Analytics для Firebase</b> (Google) показывает, как
-        используется приложение: экраны, события, сеансы, идентификатор
-        экземпляра приложения, идентификатор пользователя Apphud (как
-        идентификатор пользователя Analytics, чтобы события подписки и события
-        приложения считались вместе), рекламный идентификатор (в ЕЭЗ,
-        Великобритании и Швейцарии — только с вашего согласия, в остальных
-        странах — по умолчанию, см. раздел 7), приблизительное местоположение
-        по IP-адресу (Google
-        предварительно укорачивает IP-адрес) и автоматические события покупок с
-        продуктом, ценой и валютой. Наш ресурс Analytics связан с Google Ads,
-        чтобы измерять наши рекламные кампании приложения; для этого Google тоже
-        использует эти события. Записи, заметки и оценки настроения в Analytics
-        не отправляются никогда.
+        <b>Google Ads</b> (Google) ведёт наши рекламные кампании приложения. Наш ресурс Analytics связан с&nbsp;Google Ads, поэтому Google Ads использует события и&nbsp;идентификаторы Analytics, перечисленные выше, чтобы понимать, какая реклама привела к&nbsp;установкам, пробным периодам и&nbsp;покупкам, и&nbsp;показывать нашу рекламу людям, которым приложение может быть интересно. Google использует эти данные по своим правилам: <a href="https://business.safety.google/privacy/">Как Google использует данные из приложений, работающих с&nbsp;его сервисами</a>.
       </li>
       <li>
-        <b>Firebase Crashlytics</b> (Google) получает отчёты о сбоях:
-        трассировку стека, сведения об устройстве, идентификатор установки
-        Crashlytics и идентификатор установки Firebase.
+        <b>Firebase Crashlytics</b> (Google) получает отчёты о&nbsp;сбоях: трассировку стека, сведения об устройстве, идентификатор установки Crashlytics и&nbsp;идентификатор установки Firebase.
       </li>
       <li>
-        <b>Firebase Remote Config</b> (Google) доставляет настройки приложения,
-        например какой экран подписки показать. Он использует идентификатор
-        установки Firebase вместе со страной, языком, часовым поясом и версией
-        Android.
+        <b>Firebase Remote Config</b> (Google) доставляет настройки приложения, например какой экран знакомства с&nbsp;приложением или подписки показать, когда мы сравниваем их варианты. Он использует идентификатор установки Firebase вместе со страной, языком, часовым поясом и&nbsp;версией Android.
       </li>
       <li>
-        <b>Google Play</b> продаёт подписку как продавец. Google обрабатывает
-        ваши платёжные данные и хранит собственные записи о заказах по своей
-        политике конфиденциальности.
+        <b>Google Play</b> продаёт подписку как продавец. Google обрабатывает ваши платёжные данные и&nbsp;хранит собственные записи о&nbsp;заказах по своей политике конфиденциальности. Если вы решите оценить MyMood из приложения, оценку обрабатывает Google Play; приложение её не видит.
       </li>
       <li>
-        <b>Вход через Google и Google Drive API</b> (Google) используются только
-        для необязательной резервной копии (раздел 6).
+        <b>Вход через Google и&nbsp;Google Drive API</b> (Google) используются только для необязательной резервной копии (раздел 6).
       </li>
     </ul>
     <p>
-      Данные Firebase Google обрабатывает по условиям Firebase:
-      <a href="https://firebase.google.com/support/privacy"
-        >Privacy and Security in Firebase</a
-      >.
+      Данные Firebase Google обрабатывает по условиям Firebase: <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>.
     </p>
 
-    <h2>6. Резервная копия в Google Диске</h2>
+    <h2>6. Резервная копия в&nbsp;Google Диске</h2>
     <ul>
       <li>
-        Резервное копирование — функция подписки. Оно выключено, пока вы не
-        включите его в
-        <b>Настройки &rarr; Резервное копирование на Google Drive</b>. После
-        этого вы выбираете аккаунт Google.
+        Резервное копирование&nbsp;— функция подписки. Оно выключено, пока вы не включите его в&nbsp;<b>Настройки &rarr; Резервное копирование на Google Drive</b>. После этого вы выбираете аккаунт Google. Сохранить копию сразу можно кнопкой <b>Сохранить копию сейчас</b>.
       </li>
       <li>
-        Приложение просит доступ только к файлам, которые создаёт само
-        (<code>drive.file</code>). Остальное содержимое Диска ему не видно.
+        Приложение просит доступ только к&nbsp;файлам, которые создаёт само (<code>drive.file</code>). Остальное содержимое Диска ему не видно.
       </li>
       <li>
-        Пока копирование включено, приложение обновляет один файл
-        <code>mymood-backup.txt</code> в папке <code>MyMoodApp|Backups</code>
-        на вашем Диске. В файле — ваши записи (оценка настроения, дата, время и
-        текст заметки). Фотографии в него не входят.
+        Пока копирование включено, приложение обновляет один файл <code>mymood-backup.txt</code> в&nbsp;папке <code>MyMoodApp|Backups</code> на вашем Диске. В&nbsp;файле ваши записи (оценка настроения, дата, время и&nbsp;текст заметки, а&nbsp;также выбранные эмоции и&nbsp;теги занятий) и&nbsp;ваш список занятий и&nbsp;тегов. Фотографии в&nbsp;него не входят.
       </li>
       <li>
-        Файл лежит в вашем собственном Google Диске: вы можете его открыть,
-        скачать или удалить. Разработчик его не получает и прочитать не может.
-        Google хранит его по своим условиям и политике конфиденциальности.
+        Файл лежит в&nbsp;вашем собственном Google Диске: вы можете его открыть, скачать или удалить. Разработчик его не получает и&nbsp;прочитать не может. Google хранит его по своим условиям и&nbsp;политике конфиденциальности.
       </li>
       <li>
-        Если выключить копирование, новые загрузки прекращаются. Чтобы удалить
-        копию, удалите папку <code>MyMoodApp|Backups</code> в Google Диске (см.
-        раздел 10).
+        При восстановлении из Диска записи из копии добавляются в&nbsp;дневник на телефоне; если одна и&nbsp;та же запись есть и&nbsp;там и&nbsp;там, остаётся версия, изменённая последней.
+      </li>
+      <li>
+        Если выключить копирование или подписка закончится, новые загрузки прекращаются, а&nbsp;копия, которая уже есть на Диске, остаётся. Чтобы удалить её, удалите папку <code>MyMoodApp|Backups</code> в&nbsp;Google Диске (см. раздел 10).
       </li>
     </ul>
 
-    <h2>7. Согласие и настройки конфиденциальности</h2>
+    <h2>7. Согласие и&nbsp;ваш выбор насчёт измерения рекламы</h2>
     <p>
-      В Европейской экономической зоне, Великобритании и Швейцарии приложение
-      при запуске показывает форму согласия Google (Google User Messaging
-      Platform), пока вы на неё не ответите, и до ответа не персонализирует
-      рекламу. Ваш выбор передаётся в Google AdMob и Google Analytics через
-      режим согласия Google (consent mode), и они меняют то, что хранят и
-      используют: без вашего согласия Analytics не использует рекламный
-      идентификатор, а реклама не персонализируется.
+      На первом экране MyMood под кнопкой «Далее» написано, что, нажимая «Далее», вы принимаете Условия использования и&nbsp;эту Политику конфиденциальности, включая измерение и&nbsp;персонализацию рекламы (Google, Apphud). Нажатие «Далее» и&nbsp;есть ваше согласие. Во всех странах это устроено одинаково.
     </p>
     <p>
-      В остальных странах приложение не спрашивает заранее. Оно сообщает Google
-      Analytics, что хранение данных аналитики, хранение рекламных данных,
-      передача рекламных данных в Google и персонализация рекламы разрешены.
-      Поэтому Analytics собирает рекламный идентификатор и вместе с событиями
-      приложения использует его, чтобы измерять наши рекламные кампании, а
-      AdMob может показывать персонализированную рекламу. В штатах США с
-      законами о конфиденциальности Google может показать уведомление, в
-      котором можно отказаться от продажи или передачи ваших данных и от
-      таргетированной рекламы; если вы отказались, приложение отключает и
-      персонализацию рекламы в Analytics. Если при запуске приложение не может
-      связаться с сервисом согласия Google, действуют настройки последнего
-      успешного запуска; до первого такого запуска хранение данных аналитики и
-      рекламных данных выключено.
+      После этого приложение сообщает Google Analytics, что хранение данных аналитики, хранение рекламных данных, передача рекламных данных в&nbsp;Google и&nbsp;персонализация рекламы разрешены. Google Analytics и&nbsp;Google Ads используют события приложения, идентификатор экземпляра приложения, рекламный идентификатор и&nbsp;приблизительное местоположение по IP-адресу, чтобы измерять наши рекламные кампании приложения (какая реклама привела к&nbsp;установкам, пробным периодам и&nbsp;покупкам) и&nbsp;показывать нашу рекламу людям, которым приложение может быть интересно. Apphud может передавать в&nbsp;Google Analytics события о&nbsp;пробных периодах и&nbsp;покупках для того же измерения. Записи, заметки, эмоции, теги и&nbsp;фотографии в&nbsp;этом не участвуют никогда. Как Google использует данные из приложений, работающих с&nbsp;его сервисами: <a href="https://business.safety.google/privacy/">business.safety.google/privacy</a>.
     </p>
     <p>
-      Там, где действует форма или уведомление Google, в приложении есть пункт
-      <b>Настройки &rarr; Настройки конфиденциальности</b>. Там можно в любой
-      момент изменить или отозвать свой выбор (в ЕЭЗ, Великобритании и
-      Швейцарии) или отказаться (в штатах США с законами о конфиденциальности).
-      Пункт появляется, только когда сервис согласия Google сообщает, что он
-      нужен для вашего региона.
+      <b>Чтобы отозвать или изменить выбор,</b> выключите <b>Настройки &rarr; Измерение и&nbsp;персонализация рекламы</b>. Тогда приложение сообщит Google, что хранение рекламных данных, передача рекламных данных в&nbsp;Google и&nbsp;персонализация рекламы больше не разрешены; подсчёт того, как используется приложение (хранение данных аналитики), продолжится. Переключатель бесплатный, работает во всех странах, больше ничего в&nbsp;приложении не меняет, и&nbsp;его можно снова включить в&nbsp;любой момент. В&nbsp;штатах США с&nbsp;законами о&nbsp;конфиденциальности этот же переключатель позволяет отказаться от «продажи» или «передачи» ваших персональных данных и&nbsp;от таргетированной рекламы.
     </p>
     <p>
-      На любом телефоне Android рекламный идентификатор можно сбросить или
-      удалить в настройках телефона (Настройки &rarr; Google &rarr; Реклама или
-      Настройки &rarr; Конфиденциальность &rarr; Реклама, в зависимости от
-      модели). Когда идентификатор удалён, приложения, в том числе AdMob и
-      Analytics в MyMood, больше не могут его использовать.
+      В&nbsp;Европейской экономической зоне, Великобритании и&nbsp;Швейцарии приложение может вместо этого спросить на отдельном экране перед началом работы, где можно согласиться или отказаться. Ответ на этом экране задаёт те же сигналы, а&nbsp;изменить его можно тем же переключателем.
+    </p>
+    <p>
+      На любом телефоне Android рекламный идентификатор можно сбросить или удалить в&nbsp;настройках телефона (Настройки &rarr; Google &rarr; Реклама или Настройки &rarr; Конфиденциальность &rarr; Реклама, в&nbsp;зависимости от модели). Когда идентификатор удалён, приложения, в&nbsp;том числе Google Analytics в&nbsp;MyMood, больше не могут его использовать.
     </p>
 
     <h2>8. Подписка</h2>
     <p>
-      MyMood работает и без подписки: записи о настроении с заметками,
-      календарь, список записей, ежедневные напоминания, удаление данных и
-      (там, где действует форма или уведомление Google) настройки конфиденциальности
-      (раздел 7) доступны всем. Еженедельная подписка через
-      Google Play добавляет фотографии в записях, статистику, резервное
-      копирование в Google Диск и восстановление из него, PIN-код и отключает
-      рекламу.
+      Без подписки в&nbsp;MyMood бесплатно для всех: одна запись настроения в&nbsp;день с&nbsp;заметкой, календарь и&nbsp;список записей, ежедневное напоминание и&nbsp;напоминания после перерыва, раздел «Аналитика» с&nbsp;примером каждого отчёта, язык и&nbsp;другие настройки, переключатель измерения рекламы (раздел 7), «Ввести код доступа» и&nbsp;удаление данных. Еженедельная подписка MyMood Премиум через Google Play добавляет несколько записей в&nbsp;день и&nbsp;записи за прошлые дни, эмоции и&nbsp;теги занятий, виджет на главном экране, статистику, отчёты за неделю и&nbsp;месяц и&nbsp;«Занятия и&nbsp;настроение» в&nbsp;разделе «Аналитика», фотографии в&nbsp;записях, резервное копирование в&nbsp;Google Диск и&nbsp;восстановление из него, а&nbsp;также PIN-код. Если Премиум закончится, всё сохранённое останется на виду, а&nbsp;у&nbsp;любой записи по-прежнему можно изменить настроение и&nbsp;заметку или удалить её.
     </p>
     <ul>
-      <li>
-        Перед оформлением экран подписки показывает цену за неделю, длину
-        пробного периода, если он есть, и когда начнутся списания.
-      </li>
-      <li>
-        Если вы начали пробный период и не отменили его до окончания, он
-        автоматически переходит в платную еженедельную подписку.
-      </li>
+      <li>Перед оформлением экран подписки показывает цену за неделю, длину пробного периода, если он есть, и&nbsp;когда начнутся списания.</li>
+      <li>Если вы начали пробный период и&nbsp;не отменили его до окончания, он автоматически переходит в&nbsp;платную еженедельную подписку.</li>
       <li>Подписка продлевается каждую неделю, пока вы её не отмените.</li>
       <li>
-        <b>Как отменить:</b> откройте приложение Google Play, нажмите на фото
-        профиля, затем <b>Платежи и подписки &rarr; Подписки</b>, выберите
-        MyMood и нажмите <b>Отменить подписку</b>. Или откройте
-        <a href="https://play.google.com/store/account/subscriptions"
-          >play.google.com/store/account/subscriptions</a
-        >.
+        <b>Как отменить:</b> откройте приложение Google Play, нажмите на фото профиля, затем <b>Платежи и&nbsp;подписки &rarr; Подписки</b>, выберите MyMood и&nbsp;нажмите <b>Отменить подписку</b>. Или откройте <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.
       </li>
-      <li>
-        Удаление приложения или удаление данных <b>не отменяет</b> подписку.
-        Отмените её в Google Play.
-      </li>
+      <li>Удаление приложения или удаление данных <b>не отменяет</b> подписку. Отмените её в&nbsp;Google Play.</li>
     </ul>
 
     <h2>9. Сколько хранятся данные</h2>
@@ -958,154 +892,100 @@
         <th>Срок</th>
       </tr>
       <tr>
-        <td>Записи, заметки, фото, PIN-код и настройки на телефоне</td>
-        <td>
-          Пока вы их не удалите, не воспользуетесь пунктом «Удалить аккаунт и
-          все данные» или не удалите приложение.
-        </td>
+        <td>Записи, заметки, эмоции, теги, фото, PIN-код, данные виджета и&nbsp;настройки на телефоне</td>
+        <td>Пока вы их не удалите, не воспользуетесь пунктом «Удалить аккаунт и&nbsp;все данные» или не удалите приложение.</td>
       </tr>
       <tr>
-        <td>Файл резервной копии в вашем Google Диске</td>
-        <td>Пока вы его не удалите. Он в вашем Диске и под вашим контролем.</td>
+        <td>Файл резервной копии в&nbsp;вашем Google Диске</td>
+        <td>Пока вы его не удалите. Он в&nbsp;вашем Диске и&nbsp;под вашим контролем.</td>
       </tr>
       <tr>
         <td>Google Analytics для Firebase</td>
-        <td>
-          Наш ресурс Analytics хранит данные на уровне пользователя и событий
-          14 месяцев, а данные с истёкшим сроком Google удаляет раз в месяц.
-          Поэтому сведения о том, как вы пользовались MyMood, удаляются в
-          течение примерно 15 месяцев после того, как вы в последний раз
-          открывали приложение. Сводные отчёты, по которым нельзя определить
-          пользователя, могут храниться дольше (<a
-            href="https://support.google.com/analytics/answer/7667196"
-            >Google Analytics: хранение данных</a
-          >). Копии событий аналитики, которые мы выгружаем для анализа в свой
-          проект Google Cloud (BigQuery), хранятся не более 14 месяцев.
-        </td>
+        <td>Наш ресурс Analytics хранит данные на уровне пользователя и&nbsp;событий 14&nbsp;месяцев, а&nbsp;данные с&nbsp;истёкшим сроком Google удаляет раз в&nbsp;месяц. Поэтому сведения о&nbsp;том, как вы пользовались MyMood, удаляются в&nbsp;течение примерно 15&nbsp;месяцев после того, как вы в&nbsp;последний раз открывали приложение. Сводные отчёты, по которым нельзя определить пользователя, могут храниться дольше (<a href="https://support.google.com/analytics/answer/7667196">Google Analytics: хранение данных</a>). Копии событий аналитики, которые мы выгружаем для анализа в&nbsp;свой проект Google Cloud (BigQuery), хранятся не более 14&nbsp;месяцев.</td>
       </tr>
       <tr>
         <td>Firebase Crashlytics</td>
-        <td>
-          Отчёты о сбоях и их идентификаторы хранятся 90 дней, затем Google
-          начинает удалять их из рабочих и резервных систем (<a
-            href="https://firebase.google.com/support/privacy"
-            >Privacy and Security in Firebase</a
-          >).
-        </td>
+        <td>Отчёты о&nbsp;сбоях и&nbsp;их идентификаторы хранятся 90&nbsp;дней, затем Google начинает удалять их из рабочих и&nbsp;резервных систем (<a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>).</td>
       </tr>
       <tr>
         <td>Идентификатор установки Firebase (Remote Config, Crashlytics)</td>
-        <td>
-          Google хранит его, пока он не удалён через Firebase; после этого
-          Google удаляет его из рабочих и резервных систем в течение 180 дней
-          (та же страница). Это случайный идентификатор, он не связан с вашим
-          именем или адресом почты.
-        </td>
+        <td>Google хранит его, пока он не удалён через Firebase; после этого Google удаляет его из рабочих и&nbsp;резервных систем в&nbsp;течение 180&nbsp;дней (та же страница). Это случайный идентификатор, он не связан с&nbsp;вашим именем или адресом почты.</td>
       </tr>
       <tr>
-        <td>Google AdMob</td>
-        <td>
-          По собственным правилам хранения Google. Например, Google обезличивает
-          рекламные данные в журналах серверов: удаляет часть IP-адреса через 9
-          месяцев, а данные файлов cookie — через 18 месяцев (<a
-            href="https://policies.google.com/technologies/retention"
-            >Как Google хранит данные</a
-          >).
-        </td>
+        <td>Google Ads</td>
+        <td>По собственным правилам хранения Google (<a href="https://policies.google.com/technologies/retention">Как Google хранит данные</a>).</td>
       </tr>
       <tr>
         <td>Apphud</td>
-        <td>
-          Хранятся, пока мы пользуемся Apphud, чтобы продления, возвраты и
-          отмены подписки обрабатывались правильно. Удаляются по вашему запросу
-          (раздел 10). Если мы перестанем пользоваться Apphud, он уничтожит
-          данные после 30-дневного периода, в который их можно выгрузить (<a
-            href="https://legal.apphud.com/dpa"
-            >Соглашение Apphud об обработке данных</a
-          >).
-        </td>
+        <td>Хранятся, пока мы пользуемся Apphud, чтобы продления, возвраты и&nbsp;отмены подписки обрабатывались правильно. Удаляются по вашему запросу (раздел 10). Если мы перестанем пользоваться Apphud, он уничтожит данные после 30-дневного периода, в&nbsp;который их можно выгрузить (<a href="https://legal.apphud.com/dpa">Соглашение Apphud об обработке данных</a>).</td>
       </tr>
       <tr>
-        <td>Записи о заказах Google Play</td>
-        <td>
-          Хранит Google как продавец, по своей политике конфиденциальности.
-          Разработчик удалить их не может.
-        </td>
+        <td>Записи о&nbsp;заказах Google Play</td>
+        <td>Хранит Google как продавец, по своей политике конфиденциальности. Разработчик удалить их не может.</td>
       </tr>
     </table>
 
     <h2>10. Как удалить данные</h2>
     <ul>
       <li>
-        <b>В приложении, бесплатно для всех:</b> Настройки &rarr; «Удалить
-        аккаунт и все данные». Всё на телефоне стирается, файл и папка резервной
-        копии удаляются из вашего Google Диска, а доступ приложения к вашему
-        аккаунту Google отзывается.
+        <b>В&nbsp;приложении, бесплатно для всех:</b> Настройки &rarr; «Удалить аккаунт и&nbsp;все данные». Всё на телефоне стирается (записи с&nbsp;эмоциями и&nbsp;тегами, список занятий и&nbsp;тегов, фотографии, PIN-код, ваш выбор насчёт измерения рекламы и&nbsp;все настройки), виджет на главном экране очищается, файл и&nbsp;папка резервной копии удаляются из вашего Google Диска, а&nbsp;доступ приложения к&nbsp;вашему аккаунту Google отзывается.
       </li>
       <li>
-        <b>Резервную копию в Google Диске — самостоятельно:</b> откройте Google
-        Диск, найдите папку <code>MyMoodApp|Backups</code>, удалите её и
-        очистите корзину Диска. Чтобы отозвать и доступ приложения, откройте
-        <a href="https://myaccount.google.com/connections"
-          >myaccount.google.com/connections</a
-        >
-        и удалите MyMood.
+        <b>Резервную копию в&nbsp;Google Диске&nbsp;— самостоятельно:</b> откройте Google Диск, найдите папку <code>MyMoodApp|Backups</code>, удалите её и&nbsp;очистите корзину Диска. Чтобы отозвать и&nbsp;доступ приложения, откройте <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a> и&nbsp;удалите MyMood.
       </li>
       <li>
-        <b>Данные у Apphud и Google Analytics:</b> напишите на
-        <a href="mailto:applarik@gmail.com">applarik@gmail.com</a> с темой
-        «MyMood data deletion» и, если вы оформляли подписку, укажите номер
-        заказа Google Play (начинается с <code>GPA.</code>, есть в письме-чеке
-        от Google Play). У приложения нет учётных записей, поэтому по номеру
-        заказа мы находим ваши записи о подписке. Подробные шаги — на
-        <a href="https://klapp-app.github.io/delete-account.html"
-          >странице удаления</a
-        >.
+        <b>Данные у&nbsp;Apphud и&nbsp;Google Analytics:</b> напишите на <a href="mailto:applarik@gmail.com">applarik@gmail.com</a> с&nbsp;темой «MyMood data deletion» и, если вы оформляли подписку, укажите номер заказа Google Play (начинается с&nbsp;<code>GPA.</code>, есть в&nbsp;письме-чеке от Google Play). У&nbsp;приложения нет учётных записей, поэтому по номеру заказа мы находим ваши записи о&nbsp;подписке. Подробные шаги&nbsp;— на <a href="https://klapp-app.github.io/delete-account.html">странице удаления</a>.
       </li>
     </ul>
     <p>
-      Мы отвечаем в течение 7 рабочих дней и выполняем запросы на удаление в
-      течение 30 дней, включая запрос, который мы передаём в Apphud.
+      Мы отвечаем в&nbsp;течение 7&nbsp;рабочих дней и&nbsp;выполняем запросы на удаление в&nbsp;течение 30&nbsp;дней, включая запрос, который мы передаём в&nbsp;Apphud.
     </p>
     <p>
-      <b>Подписка:</b> удаление данных не отменяет подписку. Сначала отмените её
-      в Google Play (раздел 8).
+      <b>Подписка:</b> удаление данных не отменяет подписку. Сначала отмените её в&nbsp;Google Play (раздел 8).
     </p>
 
     <h2>11. Ваши права</h2>
     <p>
-      В зависимости от того, где вы живёте (например, по GDPR в ЕС и
-      Великобритании или по законам Калифорнии), вы можете запросить доступ к
-      своим персональным данным, их исправление или удаление, возразить против
-      их использования или ограничить его, а также в любой момент отозвать
-      согласие (Настройки &rarr; Настройки конфиденциальности, раздел 7). Пишите
-      на <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>. Вы также
-      вправе подать жалобу в местный орган по защите данных. Мы не продаём
-      персональные данные и не используем ваши записи для рекламы.
+      В&nbsp;зависимости от того, где вы живёте (например, по GDPR в&nbsp;ЕС и&nbsp;Великобритании или по законам Калифорнии), вы можете запросить доступ к&nbsp;своим персональным данным, их исправление или удаление, возразить против их использования или ограничить его, а&nbsp;также в&nbsp;любой момент отозвать согласие (Настройки &rarr; Измерение и&nbsp;персонализация рекламы, раздел 7). В&nbsp;штатах США с&nbsp;законами о&nbsp;конфиденциальности тот же переключатель означает отказ от «продажи» или «передачи» ваших данных для таргетированной рекламы. Пишите на <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>. Вы также вправе подать жалобу в&nbsp;местный орган по защите данных. Мы не продаём персональные данные за деньги и&nbsp;не используем ваши записи для рекламы.
     </p>
 
-    <h2>12. Передача данных в другие страны</h2>
+    <h2>12. Передача данных в&nbsp;другие страны</h2>
     <p>
-      Apphud хранит данные в ЕС и США. Google обрабатывает данные во многих
-      странах. Оба применяют правовые механизмы защиты при международной
-      передаче, например стандартные договорные условия ЕС.
+      Apphud хранит данные в&nbsp;ЕС и&nbsp;США. Google обрабатывает данные во многих странах. Оба применяют правовые механизмы защиты при международной передаче, например стандартные договорные условия ЕС.
     </p>
 
     <h2>13. Дети</h2>
     <p>
-      MyMood не предназначен для детей младше 13 лет; его аудитория — от 13 лет.
-      Мы сознательно не собираем данные детей младше 13 лет. Если вы считаете,
-      что приложением пользовался ребёнок младше 13 лет и его данные были
-      собраны, напишите нам, и мы их удалим.
+      MyMood не предназначен для детей младше 13&nbsp;лет; его аудитория&nbsp;— от 13&nbsp;лет. Мы сознательно не собираем данные детей младше 13&nbsp;лет. Если вы считаете, что приложением пользовался ребёнок младше 13&nbsp;лет и&nbsp;его данные были собраны, напишите нам, и&nbsp;мы их удалим.
     </p>
 
     <h2>14. Изменения политики</h2>
     <p>
-      Если политика изменится, новая версия будет опубликована по этому же
-      адресу с новой датой «Обновлено».
+      Если политика изменится, новая версия будет опубликована по этому же адресу с&nbsp;новой датой «Обновлено».
     </p>
 
-    <h2>15. Связь</h2>
+    <!-- OLDER-VERSIONS:BEGIN (marked paragraph, V27-REL-006 Values; shortened at PLAN step 7.10) -->
+    <section class="legacy" id="older-versions-ru">
+      <h2>15. Версии 1.3.0&nbsp;и&nbsp;старше: реклама и&nbsp;форма согласия Google</h2>
+      <p>
+        <i>Этот отмеченный раздел касается только версий MyMood 1.3.0&nbsp;и&nbsp;старше, которые ещё стоят на некоторых телефонах. К&nbsp;версии 1.4.0&nbsp;и&nbsp;новее он не относится.</i>
+      </p>
+      <p>
+        Версии 1.3.0&nbsp;и&nbsp;старше показывают рекламу <b>Google AdMob</b> (Google) пользователям без подписки. AdMob собирает <b>и&nbsp;передаёт</b> данные для рекламы, аналитики и&nbsp;защиты от мошенничества: IP-адрес (по нему оценивается общее местоположение), взаимодействие с&nbsp;рекламой, диагностические данные, рекламный идентификатор, app set ID и&nbsp;другие идентификаторы устройства. Google использует эти данные по своей политике конфиденциальности, поэтому в&nbsp;части рекламы Google не только наш обработчик (<a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Раскрытие данных AdMob</a>). Рекламные данные Google хранит по своим правилам: например, обезличивает их в&nbsp;журналах серверов, удаляя часть IP-адреса через 9&nbsp;месяцев, а&nbsp;данные файлов cookie&nbsp;— через 18&nbsp;месяцев (<a href="https://policies.google.com/technologies/retention">Как Google хранит данные</a>).
+      </p>
+      <p>
+        В&nbsp;Европейской экономической зоне, Великобритании и&nbsp;Швейцарии эти версии при запуске показывают форму согласия Google (Google User Messaging Platform), пока вы на неё не ответите, и&nbsp;до ответа не персонализируют рекламу; ваш выбор передаётся в&nbsp;AdMob и&nbsp;Google Analytics через режим согласия Google. В&nbsp;остальных странах они не спрашивают заранее и&nbsp;разрешают хранение данных аналитики, хранение рекламных данных, передачу рекламных данных в&nbsp;Google и&nbsp;персонализацию рекламы; в&nbsp;штатах США с&nbsp;законами о&nbsp;конфиденциальности Google может показать уведомление, в&nbsp;котором можно отказаться от продажи или передачи ваших данных и&nbsp;от таргетированной рекламы. Там, где действует форма или уведомление Google, в&nbsp;этих версиях есть пункт <b>Настройки &rarr; Настройки конфиденциальности</b>: там можно изменить или отозвать выбор или отказаться. Если при запуске приложение не может связаться с&nbsp;сервисом согласия Google, действуют настройки последнего успешного запуска; до первого такого запуска хранение данных аналитики и&nbsp;рекламных данных выключено.
+      </p>
+      <p>
+        В&nbsp;этих версиях записи о&nbsp;настроении с&nbsp;заметками бесплатны без ограничения в&nbsp;день, а&nbsp;подписка добавляет фотографии, статистику, резервное копирование в&nbsp;Google Диск и&nbsp;восстановление из него, PIN-код и&nbsp;отключает рекламу.
+      </p>
+      <p>
+        Обновление до версии 1.4.0&nbsp;убирает из приложения AdMob и&nbsp;форму согласия Google. Ответы, данные в&nbsp;форме Google, не переносятся: версия 1.4.0&nbsp;начинает с&nbsp;включённого измерения рекламы, как описано в&nbsp;разделе 7, и&nbsp;его можно выключить в&nbsp;настройках.
+      </p>
+    </section>
+    <!-- OLDER-VERSIONS:END -->
+
+    <h2>16. Связь</h2>
     <p>KLapp, <a href="mailto:applarik@gmail.com">applarik@gmail.com</a>.</p>
     </div>
 

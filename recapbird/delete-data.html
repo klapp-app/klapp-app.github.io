@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecapBird — Delete your data</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        max-width: 680px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #2c3e50;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+      }
+      h1 {
+        color: #1a252f;
+        border-bottom: 2px solid #ecf0f1;
+        padding-bottom: 12px;
+      }
+      h2 {
+        color: #34495e;
+        margin-top: 32px;
+      }
+      h3 {
+        color: #34495e;
+        margin-top: 22px;
+        font-size: 1.05em;
+      }
+      .card {
+        background: #f8f9fa;
+        border-left: 4px solid #3498db;
+        padding: 16px 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      .warning {
+        background: #fef9e7;
+        border-left: 4px solid #f39c12;
+        padding: 16px 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      code {
+        background: #eef2f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        word-break: break-all;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 18px 0;
+        font-size: 0.93em;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      th,
+      td {
+        border: 1px solid #dfe4e8;
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #f8f9fa;
+      }
+      ul,
+      ol {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      mark {
+        background: #fff3b0;
+        padding: 0 3px;
+      }
+      .testver {
+        background: #eef0ff;
+        border-left: 4px solid #464699;
+        padding: 16px 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      footer {
+        margin-top: 50px;
+        font-size: 0.85em;
+        color: #7f8c8d;
+        border-top: 1px solid #ecf0f1;
+        padding-top: 15px;
+      }
+    </style>
+  </head>
+<body>
+<h1>RecapBird</h1>
+<h2>Delete your data</h2>
+<p>
+<strong>App:</strong> RecapBird on Google Play, <code>recapbird.ai.note.taker.voice.recorder.summary</code> · <strong>Developer:</strong> KLapp · <strong>Last updated:</strong>
+October 14, 2026
+</p>
+<p>RecapBird has no user accounts and no sign-in. The current version of the app keeps its own records only on your phone and, through Google's Firebase software, sends Google only the data that the <a href="./privacy-policy.html#s3">Privacy Policy</a> lists: analytics and crash data, and an installation ID and a notification token. This page explains how to delete what is on your phone, how long Google keeps the rest, and how to ask us about it; you do not need the app to ask.</p>
+<div class="card">
+<h3>Delete everything the app keeps on your phone</h3>
+<ul>
+<li><strong>Uninstall RecapBird</strong>, or</li>
+<li>open Android <strong>Settings → Apps → RecapBird → Storage &amp; cache</strong> and tap <strong>Clear storage</strong> (the names vary by phone).</li>
+</ul>
+<p>Either way, the app's records on the phone are deleted at once: whether you finished the first launch, which version of the introduction you see, the record of your tap on “Get started”, and the IDs that Google's services stored in the app. Android's backup and phone-to-phone transfer leave this data out, so it does not come back after a reinstall. Uninstalling also stops all collection by the app.</p>
+</div>
+<h2>Data Google holds for us</h2>
+<p>This version of the app has no in-app data deletion. Uninstalling removes the data on your phone but does not delete data Google already holds. Google deletes it as follows:</p>
+<div class="table-wrap">
+<table>
+<tr>
+<th>Data</th>
+<th>Deleted</th>
+</tr>
+<tr>
+<td>Google Analytics data (app-instance ID, advertising ID, approximate location, phone and app details, how the app was found, events)</td>
+<td>After 14 months, in Google's monthly deletion run; for the app-instance ID and other user-level data, counted from your last use of the app. Google's aggregated reports are not limited by this.
+</td>
+</tr>
+<tr>
+<td>Our daily BigQuery copy of Analytics events</td>
+<td>After 60 days; Google's recovery copies of deleted tables last up to 14 more days</td>
+</tr>
+<tr>
+<td>Crash reports and their IDs (Firebase Crashlytics)</td>
+<td>After 90 days Google starts removing them</td>
+</tr>
+<tr>
+<td>Session details that Crashlytics uses for its crash statistics (app and phone details, when the app came to the foreground)</td>
+<td>Google publishes no separate deletion period for them</td>
+</tr>
+<tr>
+<td>Firebase installation ID</td>
+<td>Kept until a request to delete it reaches Firebase, then removed within 180 days; this version of the app sends no such request</td>
+</tr>
+<tr>
+<td>Notification token</td>
+<td>Deleted by Firebase once the app has not connected for 270 days</td>
+</tr>
+</table>
+</div>
+<p>Technical data that Google collects as a controller in its own right while running Firebase (“Firebase Service Data”, such as IP addresses) is kept and deleted under Google's Privacy Policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
+<p>To delete your advertising ID, open Android Settings → Privacy → Ads and tap “Delete advertising ID”; no new one is assigned. “Reset advertising ID” replaces it with a new one instead (on some older versions, “Opt out of Ads Personalization” limits its use for personalized ads). Google states that resetting the advertising ID also resets Google Analytics' app-instance ID. Neither step deletes records already sent; they are deleted as above.</p>
+<h2 id="ask">Ask us to delete your data</h2>
+<ul>
+<li>Write to applarik+recapbird@gmail.com. You do not need the app, or to reinstall it, to write.</li>
+<li>A person reads every e-mail and answers by hand.</li>
+<li><strong>Support e-mails:</strong> we delete your e-mails to us, their copies and the Telegram notifications about them when you ask from the address that sent them.</li>
+<li><strong>Analytics and crash records:</strong> RecapBird has no accounts and shows you no ID, so an e-mail by itself does not tell us which records are yours, and <strong>we do not delete records on the strength of an e-mail alone</strong>. If you also send details that let us identify your records, we delete them; if we cannot identify them, we tell you so. Either way, your analytics and crash records are deleted automatically after the periods above (the installation ID is not; see the table).</li>
+</ul>
+<p>More detail: <a href="./privacy-policy.html#s9">Privacy Policy, section 9</a>.</p>
+<footer>
+<p>&copy; 2026 KLapp · RecapBird · <a href="./privacy-policy.html">Privacy Policy</a> · <a href="./terms-of-use.html">Terms of Use</a> · <a href="../">KLapp</a>
+</p>
+</footer>
+</body>
+</html>
